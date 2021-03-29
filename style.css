@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* header section */
+
+header .bg{
+    background-color: #810000;
+    height: 70px;
+}
+
+header .title {
+    color: #EEEBDD;
+    font-size: 40px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* section 1 */
+
+body{
+    background: #EEEBDD;
+}
+
+.section1 .title_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 52px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+.section1 .title_3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 200;
+    margin-top: 50px;
+}
+
+/* section 2 */
+
+.section2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section2 .bg_all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    margin-top: 7%;
+    background-color: black;
+    border-radius: 45px;
+}
+
+.section2 .rounded_img_place{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: #EEEBDD;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+}
+
+.section2 .ano_name{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #EEEBDD;
+}
+
+.section2 .ano_name_x{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #EEEBDD;
+    margin-bottom: 20px;
+}
+
+/* Button continue */
+
+.section3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section3 .btn_bg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #810000;
+    border-radius: 10px;
+    width: 150px;
+    height: 35px;
+    margin-top: 50px;
+}
+
+.section3 .btn_txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EEEBDD;
+    font-weight: 600;
+}
+
+/* footer */
+
+footer{
+    margin-top: 35%;
+}
+
+footer .bg{
+    background-color: #810000;
+    height: 55px;
+}
+
+/* media query bg all */
