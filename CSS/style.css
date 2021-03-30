@@ -47,8 +47,22 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.chye7{
+.chye7 h1{
   font-weight: bold;
+}
+@media (max-width:768px) {
+  .chye7 h1{
+    font-size: 20px;
+  }
+  .nav-btns{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .nav-btns div {
+    width: 90px;
+    height: 30px;
+  }
 }
   
 /*main*/
@@ -103,11 +117,40 @@ nav {
 }
 .bt1{
   font-size: 20px;
-  background-color: #E5E5E5 ;
   color : #810000;
   margin-left: 25px;
-  size: 100px;
   border-radius: 100px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.btn-div {
+  color: #810000;
+}
+@media (max-width:768px){
+  .bestmatch{
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: 60% 40%;
+  }
+  .img-div1 {
+    width: 100%;
+    grid-row: 2/3;
+  }
+  .bestmatch-txt {
+    width: 100%;
+    grid-row: 1/2;
+    text-align: justify;
+  }
+  .txt {
+    width: 90%;
+  }
+  .bestmatch-txt div h1 {
+    text-align: center;
+  }
+  .btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 /* what we do */
 .what-we-do {
@@ -145,6 +188,20 @@ nav {
   background-image: url(../assets/gemma-chua-tran-no1ZI2uXTFw-unsplash.jpg);
   background-size: cover;
   border-radius: 300px;
+}
+@media (max-width:768px){
+  .what-we-do {
+    height: 600px;
+    grid-template-rows: auto 20% 10%;
+    grid-template-columns: 10% auto 10%;
+  }
+  .txt2 h1 {
+    font-size: 38px;
+  }
+  .txt2 p {
+    font-size: 18px;
+    margin-top: 30px;
+  }
 }
 
 .us {
