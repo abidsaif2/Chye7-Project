@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+}
+body{
+  background: #EEEBDD;
+}
+a{
+  text-decoration: none;
+}
+/* nav-bar*/
+header {
+  width: 100%;
+  height: 70px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  position:sticky ;
+  top: 0px;
+  background:#810000;
+}
+ 
+nav {
+  width:80%;
+  height: 100%;
+  margin: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #EEEBDD;
+}
+.nav-btns {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;  
+}
+.nav-btns a{
+  color: #810000;
+}
+.nav-btns div {
+  background-color:#EEEBDD ;
+  width: 150px;
+  height: 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chye7{
+  font-weight: bold;
+}
+  
+/*main*/
+.bestmatch{
+  margin-top: 100px;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: space-between;
+}
+.img-div1, .bestmatch-txt {
+  width: 50%;
+}
+.bestmatch-txt{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.txt {
+  width: 60%;
+}
+
+.bestmatch-txt div h1 {
+  color:#810000 ;
+  font-size: 50px;
+  text-align: left;
+  font-weight: bolder;
+}
+.bestmatch-txt div p {
+  font-weight: bold;
+}
+.img-div1{
+  height: 100%;
+  display: grid;
+  grid-template-rows: 60% auto;
+  grid-template-columns: 5% auto 5%;
+}
+.bestmatch-img {
+  background-image: url(../assets/leonardo-sanches-b7naustT-1E-unsplash.jpg);
+  background-size: cover;
+  border-radius: 80px;
+  grid-row: 1/3;
+  grid-column: 2/3;
+  z-index: 9;
+}
+.bestmatch-img-background {
+  grid-row: 2/3;
+  grid-column: 1/4;
+  background-color: #810000;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px ;
+}
+.bt1{
+  font-size: 20px;
+  background-color: #E5E5E5 ;
+  color : #810000;
+  margin-left: 25px;
+  size: 100px;
+  border-radius: 100px;
+}
+/* what we do */
+.what-we-do {
+  height: 1000px;
+  display: grid;
+  grid-template-rows: auto 30% 20%;
+  grid-template-columns: 20% auto 20%;
+}
+.what-we-do-txt {
+  background-color: #810000;
+  border-radius: 0 0 50px 50px;
+  color: #E5E5E5;
+  grid-row: 1/3;
+  grid-column: 1/4;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.txt2 {
+  margin-top: 80px;
+}
+.txt2 h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+.txt2 p {
+  font-size: 30px;
+  margin-top: 50px;
+}
+.what-we-do-img {
+  grid-row: 2/4;
+  grid-column: 2/3;
+  background-image: url(../assets/gemma-chua-tran-no1ZI2uXTFw-unsplash.jpg);
+  background-size: cover;
+  border-radius: 300px;
+}
+
+.us {
+  margin: 80px 0;
+  text-align: center;
+  color: #810000;
+}
+.made-txt h4 {
+  font-weight: bold;
+}
+footer{
+    background:#810000;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color:#EEEBDD;
+    text-decoration: none;
+}
+
+.box-area {
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 4 ;
+  
+}
+  
+.single-box { 
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center ;
+  width: 150px;
+  height: 150px;
+  text-align:center ;
+  margin:50px ;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: #810000;
+}
+.box-area{
+  color: black;
+}
+.saif
+{
+  background-image: url(../assets/saif.jpg) ;
+  background-size: cover;
+}
+.zayneb
+{
+  background-image: url(../assets/zeineb.jpg) ;
+  background-size: cover;
+}
+.ayoub 
+{
+  background-image: url(../assets/ayoub.jpg) ;
+  background-size: cover;
+}
+  
+  
+  
