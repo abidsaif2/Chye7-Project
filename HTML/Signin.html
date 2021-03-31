@@ -25,17 +25,18 @@
                 <form action="">
                     <div class="img_h">
                         <div class="img_place_holder" >
-                            <img class="upload_img" src="https://img.icons8.com/android/24/000000/upload.png"></img>
+                            <input type="image" src="https://img.icons8.com/android/24/000000/upload.png" class="upload_img" onclick="myFunction()">
                         </div>
                     </div>
 
                     <script>
-
-                        var upload_Img= document.getElementsByClassName("upload_img")
-                            function showOpenFilePiker() {
-                              window.upload_Img.showOpenFilePicker().click;
-                            }
-
+                                function myFunction(){
+                                const z = document.getElementsByClassName("img_place_holder");
+                                var x = document.createElement("input");
+                                x.className="upload_img";
+                                x.setAttribute("type","file");
+                                z.appendChild(x);
+                                };
                     </script>
 
                     <label for="fname"></label>
