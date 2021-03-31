@@ -46,23 +46,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
-.section1 .title_2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 35px;
-    font-weight: bold;
-}
 
-.section1 .title_3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 200;
-}
 
 /* section 2 */
 
@@ -74,11 +58,18 @@ body{
 
 .section2 .bg_all{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 60%;
     background-color: black;
     border-radius: 45px;
+}
+
+.section2 .sec_place{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .section2 .rounded_img_place{
@@ -98,6 +89,7 @@ body{
     }
     .section2 .bg_all {
         width: 90%;
+        margin-top: 100px
     }
     .section2 .rounded_img_place {
         height: 65px;
@@ -114,28 +106,49 @@ body{
 .section2 .ano_name{
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     color: #EEEBDD;
+    font-weight: 700;
+    font-size: 28px;
+    margin-top: 40px;
 }
 
-.section2 .ano_name_x{
+.section2 .comp_pour{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #EEEBDD;
+    font-weight: 500;
+    margin-top: 60px;
+    font-size: 24px;
+}
+
+.section2 .age{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #EEEBDD;
+    font-weight: 500;
+    margin-top: 15px;
+    font-size: 24px;
+}
+
+.section2 .birth_date{
     display: flex;
     justify-content: center;
     text-align: center;
     color: #EEEBDD;
-    margin-bottom: 20px;
+    font-weight: 500;
+    margin-top: 15px;
+    font-size: 24px;
 }
 
 /* Button continue */
 
-.section3{
-    height: 8%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.section3 .btn_bg{
+.section2 .btn_bg{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,9 +157,40 @@ body{
     width: 150px;
     height: 35px;
     cursor: pointer;
+    margin-top: 130px;
+    margin-bottom: 70px;
 }
 
-.section3 .btn_txt{
+.section2 .btn_txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EEEBDD;
+    font-weight: 600;
+}
+
+/* button next person */
+
+.sec3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec3 .btn_bg_2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 10px;
+    width: 150px;
+    height: 35px;
+    cursor: pointer;
+    margin-top: 130px;
+    margin-bottom: 70px;
+}
+
+.sec3 .btn_txt_2{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,4 +206,3 @@ footer .bg{
     height: 55px;
 }
 
-/* media query bg all */
