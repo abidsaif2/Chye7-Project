@@ -21,25 +21,24 @@
         </div>
     </header>
 
+    <script>
+        document.getElementById("img_place").addEventListener('click',function(){
+        document.getElementsByClassName("upload_img")[0].click()
+        });
+    </script>
+
     <section class="sec1">
         <div class="bg1">
             <div class="bg2">
                 <form action="SignUp-php.php">
                     <div class="img_h">
                         <div class="img_place_holder">
-                            <img class="upload_img" src="https://img.icons8.com/android/24/000000/upload.png"></img>
+                            <input type="file" class="upload_img" hidden>
+                            <div id="img_place">
+                             <img src="https://img.icons8.com/android/24/000000/upload.png">
+                            </div>
                         </div>
                     </div>
-
-                    <script>
-                                function myFunction(){
-                                const z = document.getElementsByClassName("img_place_holder");
-                                var x = document.createElement("input");
-                                x.className="upload_img";
-                                x.setAttribute("type","file");
-                                z.appendChild(x);
-                                };
-                    </script>
 
                     <label for="fname"></label>
                     <input type="text" id="fname" placeholder="Nom & Prénom" name="fname"><br><br>
