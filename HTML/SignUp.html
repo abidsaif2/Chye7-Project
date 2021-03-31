@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signin</title>
-    <link rel="stylesheet" href="../CSS/signin.css">
+    <link rel="stylesheet" href="../CSS/signUp.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
+
 <body>
-    
+
     <header>
         <div class="bg">
             <div class="back_bg">
-                 <div class="back"><img src="../assets/back_arrow.png"></div>
+                <div class="back"><img src="../assets/back_arrow.png"></div>
             </div>
-                 <p class="title">CHYE7</p>
+            <p class="title">CHYE7</p>
         </div>
     </header>
 
     <section class="sec1">
         <div class="bg1">
             <div class="bg2">
-                <form action="">
+                <form action="SignUp-php.php">
                     <div class="img_h">
-                        <div class="img_place_holder" >
+                        <div class="img_place_holder">
                             <img class="upload_img" src="https://img.icons8.com/android/24/000000/upload.png"></img>
                         </div>
                     </div>
 
                     <script>
+                        var upload_Img = document.getElementsByClassName("upload_img")
 
-                        var upload_Img= document.getElementsByClassName("upload_img")
-                            function showOpenFilePiker() {
-                              window.upload_Img.showOpenFilePicker().click;
-                            }
-
+                        function showOpenFilePiker() {
+                            window.upload_Img.showOpenFilePicker().click;
+                        }
                     </script>
 
                     <label for="fname"></label>
@@ -57,12 +58,12 @@
                         <label for="female">F</label><br>
                     </div>
 
-                        <div class="sub_btn">
-                            <input type="button" class="btn" name="fsignup" type="submit" value="SignUp">
-                        </div>
-                 </form>
-                </div>
+                    <div class="sub_btn">
+                        <input type="submit" class="btn" name="fsignup" type="submit" value="SignUp">
+                    </div>
+                </form>
             </div>
+        </div>
     </section>
 
     <footer>
@@ -78,4 +79,5 @@
     </footer>
 
 </body>
+
 </html>
