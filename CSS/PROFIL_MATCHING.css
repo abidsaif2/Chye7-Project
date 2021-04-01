@@ -7,7 +7,7 @@
 /* header section */
 #main {
     width: 100%;
-    height: 800px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -60,7 +60,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 40%;
     background-color: black;
     border-radius: 45px;
 }
@@ -81,26 +81,6 @@ body{
     border-radius: 50%;
     height: 120px;
     width: 120px;
-}
-@media (max-width:768px) {
-    #main {
-        width: 100%;
-        height: 600px;
-    }
-    .section2 .bg_all {
-        width: 90%;
-        margin-top: 100px
-    }
-    .section2 .rounded_img_place {
-        height: 65px;
-        width: 65px;
-    }
-    .section1 .title_2{
-        font-size: 25px;
-    }
-    .section1 .title_3 {
-        font-size: 15px;
-    }
 }
 
 .section2 .ano_name{
@@ -186,8 +166,8 @@ body{
     width: 150px;
     height: 35px;
     cursor: pointer;
-    margin-top: 130px;
-    margin-bottom: 70px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .sec3 .btn_txt_2{
@@ -196,6 +176,37 @@ body{
     align-items: center;
     color: #EEEBDD;
     font-weight: 600;
+}
+
+@media (min-width:320px) and (max-width:768px) {
+    #main {
+        width: 100%;
+        height: 500px;
+        margin-top: -50px;
+    }
+    .section2 .bg_all {
+        width: 90%;
+        height:350px;
+    }
+    .section2 .rounded_img_place {
+        height: 65px;
+        width: 65px;
+    }
+
+    .section2 .ano_name ,.section2 .comp_pour ,.section2 .age ,.section2 .birth_date ,.section2 .btn_bg{
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    .sec3 .btn_bg_2{
+        margin-top: 5px;
+    }
+    .section1 .title_2{
+        font-size: 25px;
+    }
+    .section1 .title_3 {
+        font-size: 15px;
+    }
 }
 
 /* footer */
