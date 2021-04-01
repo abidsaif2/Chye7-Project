@@ -29,7 +29,7 @@ if (isset($_POST['fsignup'])) {
     } else {
         $motepass = $_POST['fmail'];
         if (strlen($motepass) < 9) {
-            $errors['motepass'] = 'password must be at least 8 characters ';
+            $errors['email'] = 'password must be at least 8 characters ';
         }
     }
     if (empty($_POST['gender'])) {

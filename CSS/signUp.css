@@ -104,14 +104,10 @@ header .back{
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.sec1 .img_place_holder .upload_img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: #C4C4C4;
-    cursor: pointer;
-}
+/*.sec1 .img_place_holder .upload_img{
+
+}*/
+
 
 .sec1 #fname{
     background-color: #C4C4C4;
