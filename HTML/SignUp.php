@@ -23,12 +23,6 @@
     </header>
 
 
-    <script>
-        document.getElementById("img_place").addEventListener('click', function() {
-            document.getElementsByClassName("upload_img")[0].click()
-        });
-    </script>
-
     <section class="sec1">
         <div class="bg1">
             <div class="bg2">
@@ -42,37 +36,46 @@
                         </div>
                     </div>
                     <div class="form-div-txt">
-                        <div>
-                            <label for="fname"></label>
-                            <input type="text" id="fname" placeholder="Nom & Prénom" name="fname">
+                        <div class="form-div">
+                            <label for="fname">Name:</label>
+                            <input type="text" id="fname" value="<?php echo $nomPrenom ?>" name="fname">
                             <p><?php echo $errors['nomPrenom']; ?></p>
-                        </div><br><br>
+                        </div>
 
-                        <div>
-                            <label for="fmail"></label>
-                            <input type="email" id="fmail" placeholder="Email" name="fmail">
+                        <div class="form-div">
+                            <label for="fmail">E-mail:</label>
+                            <input type="email" id="fmail" value="<?php echo $email ?>" name="fmail">
                             <p><?php echo $errors['email']; ?></p>
-                        </div><br><br>
+                        </div>
 
-                        <div>
-                            <label for="fmdp"></label>
-                            <input type="password" id="fmdp" placeholder="Mot de passe" name="fmdp">
+                        <div class="form-div">
+                            <label for="fmdp">Password:</label>
+                            <input type="password" id="fmdp" value="<?php echo $motepass ?>" name="fmdp">
                             <p><?php echo $errors['motepass']; ?></p>
-                        </div><br><br>
+                        </div>
 
-                        <div>
-                            <label for="fbirth"></label>
-                            <input type="date" id="fbirth" placeholder="Date de naissance" name="fbirth">
+                        <div class="form-div">
+                            <label for="fbirth">Date of Birth:</label>
+                            <input type="date" id="fbirth" value="<?php echo $date ?>" name="fbirth">
                             <p><?php echo $errors['date']; ?></p>
-                        </div><br><br>
+                        </div>
 
                         <div class="radio_btn">
-                            <input type="radio" id="fmale" name="gender" value="male">
-                            <label for="male">M</label>
-                            <input type="radio" id="female" name="gender" value="female">
-                            <label for="female">F</label>
-                        </div><br>
-                        <p><?php echo $errors['gender']; ?></p>
+                            <div><label>Gender:</label></div>
+                            <div class="radios-div">
+                                <div>
+                                    <input type="radio" id="fmale" name="gender" value="male">
+                                    <label for="male">M</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    <label for="female">F</label>
+                                </div>
+                            </div>
+                            <div>
+                                <p><?php echo $errors['gender']; ?></p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="sub_btn">
@@ -92,6 +95,7 @@
             <span>Created By Chmenka Team</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
         </footer>
     </footer>
+    <script type="text/javascript" src="../js/SignUp.js"></script>
 
 </body>
 

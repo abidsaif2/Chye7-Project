@@ -66,7 +66,7 @@ header .back{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #C4C4C4;
+    background-color: #641414;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
     border-radius: 50px;
     width: 600px;
@@ -79,17 +79,18 @@ header .back{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #641414;
+    background-color: #C4C4C4;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
     border-radius: 40px;
-    width: 400px;
-    height: 600px;
+    width: 65%;
+    height: 90%;
 }
 
 .sec1 .img_h{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 20%;
 }
 
 .sec1 .img_place_holder{
@@ -97,11 +98,29 @@ header .back{
     justify-content: center;
     align-items: center;
     margin-top: 40px; 
-    background-color: #C4C4C4;
+    background-color: #EEEBDD;
     border-radius: 50%;
     height: 100px;
     width: 100px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+form {
+    height: 100%;
+    width: 100%;
+}
+.form-div-txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+}
+.form-div {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 65%;
 }
 
 /*.sec1 .img_place_holder .upload_img{
@@ -109,15 +128,14 @@ header .back{
 }*/
 
 
-.sec1 #fname{
-    background-color: #C4C4C4;
+.sec1 #fname,#fmail,#fmdp,#fbirth{
+    background-color: #EEEBDD;
+    border-color: #EEEBDD;
+    border-style: none;
     border-radius: 50px;
-    display: flex;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-    margin-top: 25px;
+    width: 250px;
+    height: 50px;
 }
 
 .sec1 #fname::placeholder{
@@ -126,49 +144,15 @@ header .back{
     padding-left: 45px;
 }
 
-.sec1 #fmail{
-    background-color: #C4C4C4;
-    border-radius: 50px;
-    display: flex;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-    margin-top: -55px;
-}
-
 .sec1 #fmail::placeholder{
     font-size: 14px;
     color: black;
         padding-left: 45px;
 }
 
-.sec1 #fmdp{
-    background-color: #C4C4C4;
-    border-radius: 50px;
-    display: flex;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-    margin-top: -55px;
-}
-
 .sec1 #fmdp::placeholder{
     font-size: 14px;
     color: black;
-    padding-left: 45px;
-}
-
-.sec1 #fbirth{
-    background-color: #C4C4C4;
-    border-radius: 50px;
-    display: flex;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-    margin-top: -55px;
     padding-left: 45px;
 }
 
@@ -180,31 +164,29 @@ header .back{
 .sec1 .radio_btn{
     cursor: pointer;
     font-size: 20px;
-    color: #C4C4C4;
-    margin-top: -25px;
-    margin-bottom: 35px;
+    width: 65%;
 }
 
 .sec1 .radio_btn input{
     cursor: pointer;
     width: 20px;
 }
-
-.sec1 #fmale input{
-    background-color: #C4C4C4;
-    color: white;
+.radios-div {
     display: flex;
     flex-direction: row;
-    margin-top: -65px;
+    justify-content: space-evenly;
+    align-items: space;
+}
+
+.sec1 #fmale input{
+    background-color: #EEEBDD;
+    color: white;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .sec1 #female input{
-    background-color: #C4C4C4;
+    background-color: #EEEBDD;
     color: white;
-    display: flex;
-    flex-direction: row;
-    margin-top: -55px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -214,6 +196,7 @@ header .back{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 10%;
 }
 
 .sec1 .sub_btn > .btn{
@@ -223,7 +206,7 @@ header .back{
     border-radius: 350px;
     width: 150px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-    background-color: #C4C4C4;
+    background-color: #EEEBDD;
 }
 
 
@@ -247,4 +230,8 @@ footer span a{
     .sec1 .bg2{
         width:85%;
     }
+}
+form p {
+    color: red;
+    margin: 0;
 }
