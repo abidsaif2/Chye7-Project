@@ -15,9 +15,11 @@
 
     <header>
         <div class="bg">
-            <div class="back_bg">
-                <div class="back"><img src="../assets/back_arrow.png"></div>
-            </div>
+            <a href="index.php">
+                <div class="back_bg">
+                    <div class="back"><img src="../assets/back_arrow.png"></div>
+                </div>
+            </a>
             <p class="title">CHYE7</p>
         </div>
     </header>

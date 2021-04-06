@@ -127,6 +127,9 @@ nav {
   margin-top: 20px;
   font-weight: 800;
 }
+.btn:hover {
+  color: #810000;
+}
 .btn-div {
   color: #810000;
  

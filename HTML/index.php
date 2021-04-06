@@ -63,7 +63,7 @@
                             Subscribe now and take our free Quizz in order to find out whith whom you match best ! </p>
                     </div>
                     <div class="btn-div">
-                        <a id="start" class="btn btn-start bt1">Sign Up</a>
+                        <a href="SignUp.php" id="start" class="btn btn-start bt1">Sign Up</a>
                     </div>
 
                 </div>
