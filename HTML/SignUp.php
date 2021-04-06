@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-div-txt">
                         <div class="form-div">
-                            <label for="fname">Name:</label>
+                            <label for="fname">Username:</label>
                             <input type="text" id="fname" value="<?php echo $nomPrenom ?>" name="fname">
                             <p><?php echo $errors['nomPrenom']; ?></p>
                         </div>
