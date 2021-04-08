@@ -48,7 +48,7 @@ if (isset($_POST['fsignup'])) {
         $email = mysqli_real_escape_string($conn, $_POST['fmail']);
         $nomPrenom = mysqli_real_escape_string($conn, $_POST['fname']);
 
-        $sql = "INSERT INTO compts(email,nom & prenom,mot de passe,gender,datedenaissance,img) VALUES ('$email','$nomPrenom','$motepass','$gender','$date','$img');";
+        $sql = "INSERT INTO compts(email,names,passwords,gender,datedenaissance,img) VALUES ('$email','$nomPrenom','$motepass','$gender','$date','$img');";
 
         if (mysqli_query($conn, $sql)) {
             header('Location:profil.php');
