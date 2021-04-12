@@ -1,7 +1,6 @@
 <?php
-session_start();
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: welcome.php");
+    header("location: profile.php");
     exit;
 }
 $conn = mysqli_connect('localhost', 'root', '', 'chyeh');
@@ -46,9 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Check if email exists, if yes then verify password
                 if (mysqli_stmt_num_rows($stmt) == 1) {
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt,  $email, $username, $passwords, $img);
+                    mysqli_stmt_bind_result($stmt,  $email, $username, $hashed_password, $img);
                     if (mysqli_stmt_fetch($stmt)) {
-                        if (password_verify($password, $hashed_password)) {
+                        if (strcmp($password, $hashed_password) == 0) {
                             // Password is correct, so start a new session
                             session_start();
 
@@ -58,15 +57,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["email"] = $email;
 
                             // Redirect user to welcome page
-                            header("location: profile.php");
+                            header("location:profile.php");
                         } else {
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid email or password.";
+                            echo "Invalid password.";
                         }
                     }
                 } else {
                     // email doesn't exist, display a generic error message
                     $login_err = "Invalid email or password.";
+                    echo "Invalid email";
                 }
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
