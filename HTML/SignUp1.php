@@ -51,7 +51,7 @@ if (isset($_POST['fsignup'])) {
         $sql = "INSERT INTO compts(email,username,passwords,gender,datedenaissance,img) VALUES ('$email','$nomPrenom','$motepass','$gender','$date','$img')";
 
         if (mysqli_query($conn, $sql)) {
-            header('Location:profil.php');
+            header('Location:profile.php');
         } else {
             echo 'query error: ' . mysqli_error($conn);
         }

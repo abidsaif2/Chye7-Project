@@ -19,7 +19,6 @@
     $sql = "SELECT * FROM compts WHERE email='$email'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
-    var_dump($row);
     ?>
 
     <header>
