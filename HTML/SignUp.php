@@ -15,9 +15,11 @@
 
     <header>
         <div class="bg">
-            <div class="back_bg">
-                <div class="back"><img src="../assets/back_arrow.png"></div>
-            </div>
+            <a href="index.php">
+                <div class="back_bg">
+                    <div class="back"><img src="../assets/back_arrow.png"></div>
+                </div>
+            </a>
             <p class="title">CHYE7</p>
         </div>
     </header>
@@ -37,7 +39,7 @@
                     </div>
                     <div class="form-div-txt">
                         <div class="form-div">
-                            <label for="fname">Name:</label>
+                            <label for="fname">Username:</label>
                             <input type="text" id="fname" value="<?php echo $nomPrenom ?>" name="fname">
                             <p><?php echo $errors['nomPrenom']; ?></p>
                         </div>

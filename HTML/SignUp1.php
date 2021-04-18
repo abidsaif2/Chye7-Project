@@ -27,7 +27,7 @@ if (isset($_POST['fsignup'])) {
     if (empty($_POST['fmdp'])) {
         $errors['motepass'] = 'a password is required <br />';
     } else {
-        $motepass = $_POST['fmail'];
+        $motepass = $_POST['fmdp'];
         if (strlen($motepass) < 9) {
             $errors['email'] = 'password must be at least 8 characters ';
         }
@@ -48,7 +48,7 @@ if (isset($_POST['fsignup'])) {
         $email = mysqli_real_escape_string($conn, $_POST['fmail']);
         $nomPrenom = mysqli_real_escape_string($conn, $_POST['fname']);
 
-        $sql = "INSERT INTO compts(email,names,passwords,gender,datedenaissance,img) VALUES ('$email','$nomPrenom','$motepass','$gender','$date','$img');";
+        $sql = "INSERT INTO compts(email,username,passwords,gender,datedenaissance,img) VALUES ('$email','$nomPrenom','$motepass','$gender','$date','$img')";
 
         if (mysqli_query($conn, $sql)) {
             header('Location:profil.php');
