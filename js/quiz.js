@@ -1,11 +1,10 @@
+var main_Section = document.getElementById("section1");
+
 function form_template(){
-  
-    var sec = document.createElement("section");
-      sec.className="sec1";
 
     var bg1 = document.createElement("div");
       bg1.className="bg1";
-        sec.appendChild(bg1);
+         main_Section.appendChild(bg1);
 
         var bg2 = document.createElement("div");
         bg2.className="bg2";
@@ -44,54 +43,57 @@ function form_template(){
 
               var btn_Texte = document.createElement("div");
               btn_Texte.className="btn_txt";
+              btn_Texte.createTextNode("Suivant");
                 btn.appendChild(btn_Texte);
 
-           body.innerHTML = `
-             <form id="form">
+            form.innerHTML = `
+              <form id="form">
 
-             <p class="title_2">${question}</p>
+              <p class="title_2">${question}</p>
 
-            <div class="form-check">
-                <input class="form-check-input radio_btn_input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label radio_btn" for="flexRadioDefault1">
-                   ${option[0]}
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input radio_btn_input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label radio_btn" for="flexRadioDefault2">
-                   ${option[1]}
-                </label>
-              </div> 
+             <div class="form-check">
+                 <input class="form-check-input radio_btn_input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                 <label class="form-check-label radio_btn" for="flexRadioDefault1">
+                    ${option[0]}
+                 </label>
+               </div>
+               <div class="form-check">
+                 <input class="form-check-input radio_btn_input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                 <label class="form-check-label radio_btn" for="flexRadioDefault2">
+                    ${option[1]}
+                 </label>
+               </div> 
 
-              <div class="form-check">
-                <input class="form-check-input radio_btn_input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label radio_btn" for="flexRadioDefault2">
-                   ${option[2]}
-                </label>
-              </div> 
+               <div class="form-check">
+                 <input class="form-check-input radio_btn_input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                 <label class="form-check-label radio_btn" for="flexRadioDefault2">
+                    ${option[2]}
+                 </label>
+               </div> 
              
-              <div class="form-check">
-                <input class="form-check-input radio_btn_input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label radio_btn" for="flexRadioDefault2">
-                  ${option[3]}
-                </label>
-              </div> 
+               <div class="form-check">
+                 <input class="form-check-input radio_btn_input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                 <label class="form-check-label radio_btn" for="flexRadioDefault2">
+                   ${option[3]}
+                 </label>
+               </div> 
              
-              <div class="btn_bg">
-                  <div class="btn_txt">Continue</div>
-              </div>
+               <div class="btn_bg">
+                   <div class="btn_txt">Continue</div>
+               </div>
 
-            </form>`
+             </form>`
           
    }
 
 form_template();
 
-var questions = fetch("../js/quiz_question.json")
-  
-  .then( response => response.json() )
-  .then (data => {
-        console.log(data.question)
-      })
-      
+var questions = fetch("../js/quiz_question.json").then( response => response.json() )
+
+questions.then(data => 
+    data.forEach(txt => {
+
+        var quiz = creation(txt.question, txt.option)
+        form.appendChild(quiz)
+    })
+)
