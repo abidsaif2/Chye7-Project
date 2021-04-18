@@ -1,6 +1,6 @@
 var main_Section = document.getElementById("section1");
 
-function form_template(){
+function form_template(numb,question,options){
 
     var bg1 = document.createElement("div");
       bg1.className="bg1";
@@ -43,7 +43,6 @@ function form_template(){
 
               var btn_Texte = document.createElement("div");
               btn_Texte.className="btn_txt";
-              btn_Texte.createTextNode("Suivant");
                 btn.appendChild(btn_Texte);
 
             form.innerHTML = `
@@ -54,27 +53,27 @@ function form_template(){
              <div class="form-check">
                  <input class="form-check-input radio_btn_input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                  <label class="form-check-label radio_btn" for="flexRadioDefault1">
-                    ${option[0]}
+                    ${options[0]}
                  </label>
                </div>
                <div class="form-check">
                  <input class="form-check-input radio_btn_input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                  <label class="form-check-label radio_btn" for="flexRadioDefault2">
-                    ${option[1]}
+                    ${options[1]}
                  </label>
                </div> 
 
                <div class="form-check">
                  <input class="form-check-input radio_btn_input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                  <label class="form-check-label radio_btn" for="flexRadioDefault2">
-                    ${option[2]}
+                    ${options}
                  </label>
                </div> 
              
                <div class="form-check">
                  <input class="form-check-input radio_btn_input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                  <label class="form-check-label radio_btn" for="flexRadioDefault2">
-                   ${option[3]}
+                   ${options}
                  </label>
                </div> 
              
@@ -86,14 +85,13 @@ function form_template(){
           
    }
 
-form_template();
-
 var questions = fetch("../js/quiz_question.json").then( response => response.json() )
 
 questions.then(data => 
     data.forEach(txt => {
 
-        var quiz = creation(txt.question, txt.option)
-        form.appendChild(quiz)
+        var quiz = form_template(txt.numb,txt.question, txt.options);
+          form.appendChild(quiz)
+                 
     })
 )
