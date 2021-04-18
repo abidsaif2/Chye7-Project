@@ -1,0 +1,142 @@
+[
+    {
+    "numb": 1,
+    "question": "the end of the world is coming, you can save only one kind of animal, which do you peak ?",
+    "options": [
+      "rabbit",
+      "sheep",
+      "deer",
+      "horse"
+    ]
+  },
+  {
+    "numb": 2,
+    "question": "You and your partner are hanging out together but haven't said more than a few words to each other the entire evening. How would you feel about this?",
+    "options": [
+      "Normal - sometimes we talk, sometimes we just keep silent.",
+      "Fine - we have been together for such a long time that it's not necessary to talk all the time.",
+      "OK - we rarely talk to each other, and I got used to it.",
+      "Upset as usual - we rarely talk to each other, and it still bugs me."
+    ]
+  },
+    {
+    "numb": 3,
+    "question": "Your partner really  becomes really friends with your best buddy. How do you feel about it?",
+    "options": [
+      "I deeply resent it.",
+      "I don't care.",
+      "I would prefer them not to hang out alone, but I don't really mind.",
+      "I'm thrilled that they get along well."
+    ]
+  },
+    {
+    "numb": 4,
+    "question": "When you find the love of your life, you have to cling to it - and do whatever it takes to hold on. To what degree do you endorse this statement?",
+    "options": [
+      "Strongly agree",
+      "Slightly Agree",
+      "Slightly Disagree",
+      "Strongly disagree"
+    ]
+  },
+
+  {
+    "numb": 5,
+    "question": "persona of the person you're attracted to:",
+    "options": [
+      "cold outside/ warm inside ",
+      "obedient and warm",
+      "elegant and well mannerd",
+      "unbrilled, free spirited and free"
+    ]
+  },
+
+  {
+    "numb": 5,
+    "question": "persona of the person you're attracted to:",
+    "options": [
+      "cold outside/ warm inside ",
+      "obedient and warm",
+      "elegant and well mannerd",
+      "unbrilled, free spirited and free"
+    ]
+  },
+
+  {
+    "numb": 6,
+    "question": "the impression you would like to give to your partner:",
+    "options": [
+      "loyal and faithful",
+      "stylish",
+      "optimistic",
+      "flexible"
+    ]
+  },
+
+  {
+    "numb": 7,
+    "question": "behavior that would cause you to break up:",
+    "options": [
+      "arrogance + authority",
+      "too emotional and moody",
+      "ruthlessness",
+      "insecurity"
+    ]
+  },
+
+  {
+    "numb": 8,
+    "question": "relation you wanna build with a partner",
+    "options" :[
+      "you know what the other person is thinking without saying a word",
+      "talk about everything ",
+      "a relation that makes you feel warm and always in love ",
+      "a long-lasting relationship "
+    ]
+  },
+
+  {
+    "numb": 9,
+    "question": "your views about marriage ",
+    "options": [
+      "happy marriages don't exist ",
+      "marriage is precious ",
+      "afraid of marriage ",
+      "you always wanted to get married, but you don't know what it's all about."
+    ]
+  },
+
+  {
+    "numb": 10,
+    "question": "When there is something that deeply bothers you about your relationship, how do you deal with it?",
+    "options": [
+      "Denial is my middle name.",
+      "I deal with it by yelling/nagging until I get my way.",
+      "I ignore it; it will go away.",
+      "I deal with it with calm confrontation."
+    ]
+  },
+
+  {
+    "numb": 11,
+    "question": "You would like to make love to your partner but s/he is not in the mood. How would you feel?",
+    "options" :[
+      "Fine; it happens - I can cope.",
+      "Slightly put-off, but only for a little while",
+      "Miserable and rejected",
+      "Frustrated and angry"
+    ]
+  },
+
+  {
+    "numb": 12,
+    "question": "How do you feel when receiving criticism from your partner?",
+    "options" :[
+      "I can take any criticism, constructive or not.",
+      "I can accept constructive criticism, but I get upset when my partner hits below the belt.",
+      "I'm hurt by any criticism, constructive or not.",
+      "It is not my partner's place to criticize me - if she/he did, I'd definitely bite back with my own criticism."
+    ]
+  }
+
+]
