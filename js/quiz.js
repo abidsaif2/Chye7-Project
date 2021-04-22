@@ -66,14 +66,14 @@ function form_template(numb,question,options){
                <div class="form-check">
                  <input class="form-check-input radio_btn_input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                  <label class="form-check-label radio_btn" for="flexRadioDefault2">
-                    ${options}
+                    ${options[2]}
                  </label>
                </div> 
              
                <div class="form-check">
                  <input class="form-check-input radio_btn_input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                  <label class="form-check-label radio_btn" for="flexRadioDefault2">
-                   ${options}
+                   ${options[3]}
                  </label>
                </div> 
              
@@ -87,14 +87,14 @@ function form_template(numb,question,options){
 
 var form_Select = document.querySelector('form');
 var next_Btn = document.getElementsByClassName('btn_txt');
-var data_array = data;
+
 
 let count =0;
 
 function next(){
     form_Select[count].classlist.remove('active');
 
-      if(count < dataarray -1){
+      if(count < form_data -1){
         count++
       }
   else {
@@ -107,9 +107,9 @@ var questions = fetch("../js/quiz_question.json").then( response => response.jso
 
 questions.then(data => 
     data.forEach(txt => {
-
         var quiz = form_template(txt.numb,txt.question, txt.options);
           form.appendChild(quiz)
+         var  form_Data = txt;
                  
     })
 )
