@@ -78,12 +78,30 @@ function form_template(numb,question,options){
                </div> 
              
                <div class="btn_bg">
-                   <div class="btn_txt">Continue</div>
+                   <div class="btn_txt" onclick="next">Continue</div>
                </div>
 
              </form>`
           
    }
+
+var form_Select = document.querySelector('form');
+var next_Btn = document.getElementsByClassName('btn_txt');
+var data_array = data;
+
+let count =0;
+
+function next(){
+    form[count].classlist.remove('active');
+
+      if(count < dataarray -1){
+        count++
+      }
+  else {
+        count=0;
+   }
+    form[count].classlist.add('active')
+  }
 
 var questions = fetch("../js/quiz_question.json").then( response => response.json() )
 
