@@ -92,7 +92,7 @@ var data_array = data;
 let count =0;
 
 function next(){
-    form[count].classlist.remove('active');
+    form_Select[count].classlist.remove('active');
 
       if(count < dataarray -1){
         count++
