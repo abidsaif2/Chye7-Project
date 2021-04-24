@@ -98,15 +98,16 @@ header .title {
     border-radius: 10px;
     width: 150px;
     height: 35px;
-    cursor: pointer;
+    
 }
 
-.sec1 .bg2 .btn_txt{
+.sec1 .bg2 .btn_txt input{
     display: flex;
     justify-content: center;
     align-items: center;
     color: #EEEBDD;
     font-weight: 600;
+    cursor: pointer;
 }
 
 @media (min-width:320px) and (max-width:768px) {
