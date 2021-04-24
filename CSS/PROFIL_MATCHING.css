@@ -40,12 +40,6 @@ header .title {
 body{
     background: #EEEBDD;
 }
-.section1{
-    height: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
 
 /* section 2 */
@@ -54,6 +48,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 600px;
 }
 
 .section2 .bg_all{
@@ -61,6 +56,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 40%;
+    height: 100%;
     background-color: black;
     border-radius: 45px;
 }
