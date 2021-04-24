@@ -1,4 +1,5 @@
 <?php
+session_start();
 function matching($email)
 {
     $conn = mysqli_connect('localhost', 'root', '', 'chyeh');
@@ -53,7 +54,7 @@ function matching($email)
         // output data of each row
         while ($row = $result->fetch_assoc()) {
             $useremail = $userm;
-            $usernam = $row["username"];
+            $username = $row["username"];
             $userdate = $row["datedenaissance"];
             $userimg = $row["img"];
         }

@@ -65,9 +65,12 @@
                 <div class="chat_bg">
                     <div class="chat">Chat</div>
                 </div>
+                <div class="chat_bg">
+                    <div class="chat"><a href="PROFIL_MATCHING.php">l7ob</a></div>
+                </div>
                 <br>
                 <div class="quiz_bg">
-                    <div class="quiz">Refaire le QUIZ</div>
+                    <div class="quiz"><a href="quiz.html">Refaire le QUIZ</a></div>
                 </div>
 
             </div>
