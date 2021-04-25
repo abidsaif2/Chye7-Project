@@ -1,7 +1,7 @@
 <?php
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+session_start();
+if (isset($_SESSION['email'])) {
     header("location: profile.php");
-    exit;
 }
 $conn = mysqli_connect('localhost', 'root', '', 'chyeh');
 if (!$conn) {
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if (mysqli_stmt_fetch($stmt)) {
                         if (strcmp($password, $hashed_password) == 0) {
                             // Password is correct, so start a new session
-                            session_start();
+
 
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;

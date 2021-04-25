@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #EEEBDD;
+}
+
+/* header title */
+
+header .bg{
+    background-color: #810000;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .title {
+    color: #EEEBDD;
+    font-size: 40px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main section */
+
+.sec1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #810000;
+    font-weight: 800;
+    margin-top: 40px;
+    font-size: 36px;
+}
+
+.sec1 .bg2 .title_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.sec1 .bg1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 160px;
+    background-color: #810000;
+    width: 600px;
+    height: 500px;
+    border-radius: 50px;
+}
+
+.sec1 .bg2{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 450px;
+    border-radius: 50px;
+}
+
+.sec1 .bg2 .title_2{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec1 .bg2 .radio_btn{
+    color: white ;
+    margin-left: 100px;
+    padding-bottom: 30px;
+}
+
+.sec1 .bg2 .btn_bg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #810000;
+    border-radius: 10px;
+    width: 150px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.sec1 .bg2 .btn_txt{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #810000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EEEBDD;
+    font-weight: 600;
+}
+
+@media (min-width:320px) and (max-width:768px) {
+
+    .sec .title{
+        text-align: center;
+    }
+
+    .sec1 .bg1 {
+        width: 100%;
+        height: 450px;
+    }
+    
+    .sec1 .bg2 {
+        width: 80%;
+        height: 400px;
+    }
+
+ }
+
+/* footer section */
+
+footer{
+    background:#810000;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color:#EEEBDD;
+    text-decoration: none;
+}
