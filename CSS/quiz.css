@@ -102,6 +102,10 @@ header .title {
 }
 
 .sec1 .bg2 .btn_txt{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #810000;
     display: flex;
     justify-content: center;
     align-items: center;

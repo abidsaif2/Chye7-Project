@@ -71,10 +71,11 @@
             </div>
 
             <div class="bg2">
-
+                <br>
                 <div class="chat_bg">
                     <div class="chat"><a href="logout.php?logout_id=<?php echo $row1['email']; ?>" class="logout">Logout</a></div>
                 </div>
+                <br>
                 <div class="chat_bg">
                     <div class="chat"><a href="PROFIL_MATCHING.php">l7ob</a></div>
                 </div>

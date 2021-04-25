@@ -80,7 +80,7 @@ function form_template(numb, question, options) {
                </div> 
              
                <div class="btn_bg">
-                   <input class="btn_txt" id="btn_txt" type="submit" placeholder="Continue" onclick="next(event)"></input>
+                   <input class="btn_txt" id="btn_txt" type="submit" placeholder="Continue" onclick="next(event)">
                </div>
 
              </form>`
