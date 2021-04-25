@@ -15,10 +15,20 @@
         echo 'connection error' . mysqli_connect_error();
     }
     session_start();
+    if (!isset($_SESSION['email'])) {
+        header("location: login.php");
+    }
+
     $email = $_SESSION["email"];
     $sql = "SELECT * FROM compts WHERE email='$email'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
+    ?>
+    <?php
+    $sql1 = mysqli_query($conn, "SELECT * FROM compts WHERE email = '$email'");
+    if (mysqli_num_rows($sql1) > 0) {
+        $row1 = mysqli_fetch_assoc($sql1);
+    }
     ?>
 
     <header>
@@ -63,7 +73,7 @@
             <div class="bg2">
 
                 <div class="chat_bg">
-                    <div class="chat">Chat</div>
+                    <div class="chat"><a href="logout.php?logout_id=<?php echo $row1['email']; ?>" class="logout">Logout</a></div>
                 </div>
                 <div class="chat_bg">
                     <div class="chat"><a href="PROFIL_MATCHING.php">l7ob</a></div>

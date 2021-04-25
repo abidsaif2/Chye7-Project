@@ -1,5 +1,9 @@
 <?php
 $conn = mysqli_connect('localhost', 'root', '', 'chyeh');
+session_start();
+if (isset($_SESSION['email'])) {
+    header("location: profile.php");
+}
 $errors = array('nomPrenom' => '', 'email' => '', 'motepass' => '', 'date' => '', 'gender' => '', 'img' => '');
 if (!$conn) {
     echo 'connection error' . mysqli_connect_error();
@@ -51,7 +55,10 @@ if (isset($_POST['fsignup'])) {
         $sql = "INSERT INTO compts(email,username,passwords,gender,datedenaissance,img) VALUES ('$email','$nomPrenom','$motepass','$gender','$date','$img')";
 
         if (mysqli_query($conn, $sql)) {
-            header('Location:profile.php');
+            $_SESSION["loggedin"] = true;
+            $_SESSION["username"] = $nomPrenom;
+            $_SESSION["email"] = $email;
+            header('Location: profile.php');
         } else {
             echo 'query error: ' . mysqli_error($conn);
         }
