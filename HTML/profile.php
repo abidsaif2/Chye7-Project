@@ -18,7 +18,6 @@
     if (!isset($_SESSION['email'])) {
         header("location: login.php");
     }
-
     $email = $_SESSION["email"];
     $sql = "SELECT * FROM compts WHERE email='$email'";
     $result = $conn->query($sql);
@@ -29,65 +28,116 @@
     if (mysqli_num_rows($sql1) > 0) {
         $row1 = mysqli_fetch_assoc($sql1);
     }
+    $birthDate = $row["datedenaissance"];
+    $birthDate = explode("-", $birthDate);
+    $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[1], $birthDate[2], $birthDate[0]))) > date("md")
+        ? ((date("Y") - $birthDate[0]) - 1)
+        : (date("Y") - $birthDate[0]));
     ?>
 
     <header>
-        <div class="bg">
-            <div class="back_bg">
-                <div id="arrow_btn"></div>
-                <div class="back"><img src="../assets/back_arrow.png"></div>
-            </div>
-            <p class="title">CHYE7</p>
+        <div id="nav-bar">
+            <nav>
+                <div class="icon">
+                    <a href="logout.php?logout_id=<?php echo $row1['email']; ?>"><img src="../assets/Groupe 4.svg"></a>
+                </div>
+                <div class="bg">
+                    <h1 class="title">My Profile</h1>
+                </div>
+                <div class="icon">
+                    <img src="../assets/Icon awesome-user-edit.svg">
+
+                </div>
+            </nav>
         </div>
-    </header>
 
-    <section>
 
-        <div class="container">
+        <div id="main-info">
+            <div class="img_place">
+                <?php if (!empty($row["img"])) {
+                    echo "<div style='background-image:url(../images/" . $row['img'] . "'); ></div>";
+                } else { ?>
+                    <img src="../assets/user.svg">
+                <?php } ?>
 
-            <div class="title1">Profil</div>
 
-            <div class="img_place"></div>
+            </div>
 
 
             <div class="bg1">
-                <table class="table">
-                    <tr>
-                        <th><?php echo $row["username"] ?></th>
-                    </tr>
+                <div class="name-age">
+                    <div>
+                        <?php echo strtoupper($row["username"]) . ', '; ?>
+                    </div>
+                    <div>
 
-                    <tr>
-                        <th><?php echo $row["email"] ?></th>
-                    </tr>
+                        <?php echo $age; ?>'
+                    </div>
+                </div>
+                <div class="headline">
+                    <?php echo $row["Headline"]; ?>
 
-                    <tr>
-                        <th><?php echo $row["datedenaissance"] ?></th>
-                    </tr>
-
-                    <tr>
-                        <th><?php echo $row["gender"] ?></th>
-                    </tr>
-                </table>
+                </div>
             </div>
 
-            <div class="bg2">
-                <br>
-                <div class="chat_bg">
-                    <div class="chat"><a href="logout.php?logout_id=<?php echo $row1['email']; ?>" class="logout">Logout</a></div>
-                </div>
-                <br>
-                <div class="chat_bg">
-                    <div class="chat"><a href="PROFIL_MATCHING.php">l7ob</a></div>
-                </div>
-                <br>
-                <div class="quiz_bg">
-                    <div class="quiz"><a href="quiz.html">Refaire le QUIZ</a></div>
-                </div>
+            <div class="email">
+                <?php echo $row["email"] ?>
+            </div>
 
+            <!--<div class="bg2">
+
+                    <div class="chat_bg">
+                        <div class="chat"><a href="logout.php?logout_id=<?php echo $row1['email']; ?>" class="logout">Logout</a></div>
+                    </div>
+
+                    <div class="chat_bg">
+                        <div class="chat"><a href="PROFIL_MATCHING.php">l7ob</a></div>
+                    </div>
+
+                    <div class="quiz_bg">
+                        <div class="quiz"><a href="quiz.html">Refaire le QUIZ</a></div>
+                    </div>
+
+                </div> -->
+        </div>
+        <div id="side-info">
+            <div class="info">
+                <div class="about">
+                    <h2>About me:</h2>
+                    </br>
+                    <?php if (!empty($row["about"])) { ?>
+                        <p>
+                            <?php echo $row["about"];  ?>
+                        </p>
+                    <?php } else { ?>
+                        <p>...</p>
+                    <?php } ?>
+
+                </div>
+                </br>
+                <div>
+                    <h2>Interests:</h2>
+                    </br>
+                    <div class="interests">
+                        <?php $interests = explode(',', $row['interests']);
+                        foreach ($interests as $interest) { ?>
+                            <div class="interst"><?php echo $interest; ?></div>
+                        <?php } ?>
+                    </div>
+                </div>
             </div>
 
         </div>
-    </section>
+    </header>
+    <footer>
+        <div class="icon">
+            <a href="quiz.html"><img src="../assets/229116-2000.svg"></a>
+        </div>
+        <div class="icon-like">
+            <a href="PROFIL_MATCHING.php"><img src="../assets/like.svg"></a>
+        </div>
+
+    </footer>
 
 </body>
 

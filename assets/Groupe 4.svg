@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="78" viewBox="0 0 88 78">
+  <g id="Groupe_4" data-name="Groupe 4" transform="translate(-125 -78)">
+    <rect id="Rectangle_25" data-name="Rectangle 25" width="88" height="78" rx="11" transform="translate(125 78)" fill="#fff" opacity="0.36"/>
+    <g id="Polygone_3" data-name="Polygone 3" transform="translate(149 132) rotate(-90)" fill="none">
+      <path d="M15,0,30,34H0Z" stroke="none"/>
+      <path d="M 15.00000095367432 7.432353973388672 L 4.602510452270508 31 L 25.39749145507813 31 L 15.00000095367432 7.432353973388672 M 15.00000095367432 0 L 30 34 L 1.9073486328125e-06 34 L 15.00000095367432 0 Z" stroke="none" fill="#fff"/>
+    </g>
+  </g>
+</svg>
