@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    <?php $conn = mysqli_connect('localhost', 'root', '', 'chyeh');
+    <?php
+    $conn = mysqli_connect('localhost', 'root', '', 'chyeh');
     if (!$conn) {
         echo 'connection error' . mysqli_connect_error();
     }
@@ -20,6 +21,7 @@
         header("location: login.php");
     }
     $email = $_SESSION["email"];
+    include('updateProfile.php');
     $sql = "SELECT * FROM compts WHERE email='$email'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
@@ -34,6 +36,10 @@
     $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[1], $birthDate[2], $birthDate[0]))) > date("md")
         ? ((date("Y") - $birthDate[0]) - 1)
         : (date("Y") - $birthDate[0]));
+
+
+
+
     ?>
 
     <header>
@@ -153,7 +159,7 @@
                         </div>
                         <div>
                             <label>Interests:</label>
-                            <textarea id="intrests" rows="3" name="about" placeholder="the interests should be separated by comma (,)" class="inputTxt"></textarea>
+                            <textarea id="intrests" rows="3" name="intrests" placeholder="the interests should be separated by comma (,)" class="inputTxt"></textarea>
                         </div>
                         <div>
                             <label>About:</label>
@@ -175,7 +181,7 @@
     <!-- Second modal dialog -->
     <div class="modal fade" id="modal2" aria-hidden="true" aria-labelledby="..." tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content modalWith">
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal2" aria-label="Close"></button>
                 </div>
@@ -195,13 +201,17 @@
                                 <input type="email" name="cNewEmail" class="inputTxt txt">
                             </div>
                             <div>
-                                <input type="submit" id="submit1" name="submit" value="Save E-mail" class="inputSubmit">
+                                <input type="submit" id="submit1" name="submit1" value="Save E-mail" class="inputSubmit">
                             </div>
 
                         </form>
                     </div>
                     <div class="form-div2">
                         <form id="updateForm3" name="updateForm3" method="POST" action="profile.php">
+                            <div>
+                                <label>Password:</label>
+                                <input type="password" name="PWD" class="inputTxt txt">
+                            </div>
                             <div>
                                 <label>New Password:</label>
                                 <input type="password" name="newPWD" class="inputTxt txt">
@@ -211,7 +221,7 @@
                                 <input type="password" name="cNewPWD" class="inputTxt txt">
                             </div>
                             <div>
-                                <input type="submit" id="submit2" name="submit" value="Save password" class="inputSubmit">
+                                <input type="submit" id="submit2" name="submit2" value="Save password" class="inputSubmit">
                             </div>
 
                         </form>
