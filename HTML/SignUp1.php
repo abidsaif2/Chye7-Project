@@ -58,6 +58,7 @@ if (isset($_POST['fsignup'])) {
             $_SESSION["loggedin"] = true;
             $_SESSION["username"] = $nomPrenom;
             $_SESSION["email"] = $email;
+            $_SESSION["gender"] = $gender;
             header('Location: profile.php');
         } else {
             echo 'query error: ' . mysqli_error($conn);

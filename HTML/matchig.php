@@ -6,6 +6,7 @@ if (!$conn) {
     echo 'connection error' . mysqli_connect_error();
 }
 $email = $_SESSION["email"];
+$gender = $_SESSION["gender"];
 $mainUeser = array();
 $users = array();
 $usersAnswers = array();
@@ -18,7 +19,7 @@ if ($result->num_rows > 0) {
         array_push($mainUeser, $row["answer"]);
     }
 }
-$sql = "SELECT email FROM compts WHERE email <> '$email'";
+$sql = "SELECT email FROM compts WHERE email <> '$email' and gender <> '$gender'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
