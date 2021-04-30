@@ -12,17 +12,17 @@ $email_err = $password_err = $login_err = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if email is empty
-    if (empty(trim($_POST["email"]))) {
+    if (empty(trim(htmlspecialchars($_POST["email"])))) {
         $email_err = "Please enter email.";
     } else {
-        $email = trim($_POST["email"]);
+        $email = trim(htmlspecialchars($_POST["email"]));
     }
 
     // Check if password is empty
-    if (empty(trim($_POST["password"]))) {
+    if (empty(trim(htmlspecialchars($_POST["password"])))) {
         $password_err = "Please enter your password.";
     } else {
-        $password = trim($_POST["password"]);
+        $password = trim(htmlspecialchars($_POST["password"]));
     }
 
     // Validate credentials

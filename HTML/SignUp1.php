@@ -12,26 +12,26 @@ $nomPrenom = $email = $motepass = $date = $gender = $img = '';
 
 if (isset($_POST['fsignup'])) {
 
-    if (empty($_POST['fmail'])) {
+    if (empty(htmlspecialchars($_POST['fmail']))) {
         $errors['email'] = 'an email is required <br />';
     } else {
-        $email = $_POST['fmail'];
+        $email = htmlspecialchars($_POST['fmail']);
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $errors['email'] = 'email must be a valid email address';
         }
     }
-    if (empty($_POST['fname'])) {
+    if (empty(htmlspecialchars($_POST['fname']))) {
         $errors['nomPrenom'] = 'a name is required <br />';
     } else {
-        $nomPrenom = $_POST['fname'];
+        $nomPrenom = htmlspecialchars($_POST['fname']);
         if (!preg_match('/^[a-zA-Z\s]+$/', $nomPrenom)) {
             $errors['nomPrenom'] = 'name must be lettres and spaces only';
         }
     }
-    if (empty($_POST['fmdp'])) {
+    if (empty(htmlspecialchars($_POST['fmdp']))) {
         $errors['motepass'] = 'a password is required <br />';
     } else {
-        $motepass = $_POST['fmdp'];
+        $motepass = htmlspecialchars($_POST['fmdp']);
         if (strlen($motepass) < 9) {
             $errors['email'] = 'password must be at least 8 characters ';
         }
