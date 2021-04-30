@@ -171,6 +171,7 @@ label {
     border-width: 2px;
     border-color: white;
     color: white;
+    border-radius: 8px;
 }
 input {
     margin: 10px 0;
