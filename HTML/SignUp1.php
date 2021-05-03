@@ -1,13 +1,10 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'chyeh');
+include('config.php');
 session_start();
 if (isset($_SESSION['email'])) {
     header("location: profile.php");
 }
 $errors = array('nomPrenom' => '', 'email' => '', 'motepass' => '', 'date' => '', 'gender' => '', 'img' => '');
-if (!$conn) {
-    echo 'connection error' . mysqli_connect_error();
-}
 $nomPrenom = $email = $motepass = $date = $gender = $img = '';
 
 if (isset($_POST['fsignup'])) {
