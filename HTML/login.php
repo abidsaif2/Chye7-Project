@@ -1,11 +1,8 @@
 <?php
+include('config.php');
 session_start();
 if (isset($_SESSION['email'])) {
     header("location: profile.php");
-}
-$conn = mysqli_connect('localhost', 'root', '', 'chyeh');
-if (!$conn) {
-    echo 'connection error' . mysqli_connect_error();
 }
 $email = $password = "";
 $email_err = $password_err = $login_err = "";

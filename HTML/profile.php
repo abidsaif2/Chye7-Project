@@ -12,10 +12,7 @@
 
 <body>
     <?php
-    $conn = mysqli_connect('localhost', 'root', '', 'chyeh');
-    if (!$conn) {
-        echo 'connection error' . mysqli_connect_error();
-    }
+    include('config.php');
     session_start();
     if (!isset($_SESSION['email'])) {
         header("location: login.php");
@@ -62,7 +59,7 @@
         <div id="main-info">
             <div class="img_place">
                 <?php if (!empty($row["img"])) {
-                    echo "<div style='background-image:url(../images/" . $row['img'] . "'); ></div>";
+                    echo "<div style='background-image:url(../images/" . $row['img'] . ")'; ></div>";
                 } else { ?>
                     <img src="../assets/user.svg">
                 <?php } ?>
@@ -129,7 +126,7 @@
             <a href="quiz.html"><img src="../assets/229116-2000.svg"></a>
         </div>
         <div class="icon-like">
-            <a href="PROFIL_MATCHING.php"><img src="../assets/like.svg"></a>
+            <a data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img src="../assets/like.svg"></a>
         </div>
 
     </footer>
@@ -234,6 +231,9 @@
             </div>
         </div>
     </div>
+    <?php
+    include('PROFIL_MATCHING.php');
+    ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 

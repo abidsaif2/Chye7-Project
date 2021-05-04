@@ -1,50 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include('matchig.php'); ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chye7 - Find Your Soul</title>
-    <link rel="stylesheet" href="../CSS/PROFIL_MATCHING.css">
-    <?php include('matchig.php'); ?>
-</head>
-
-<body>
-
-    <header>
-
-        <div class="bg">
-            <p class="title">CHYE7</p>
-        </div>
-
-    </header>
-    <div id="main">
-
-        <section2 class="section2">
-
-            <div class="bg_all">
-
-                <div class="sec_place">
-                    <div class="rounded_img_place"></div>
-                    <div class="ano_name"><?php echo $username; ?></div>
-                    <div class="comp_pour email"><?php echo $useremail; ?></div>
-                    <div class="birth_date"><?php echo $userdate; ?></div>
-                </div>
-
-
-
-
+</div>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog profile-modal">
+        <div class="modal-content">
+            <div class="modal-header profile-img">
+                <?php if (!empty($userimg)) {
+                    echo "<div style='background-image:url(../images/" . $userimg . "'); ><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'>
+                    </button></div>";
+                } else { ?>
+                    <div style='background-image:url(../assets/user.svg)' ;><button type=' button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'>
+                        </button></div>
+                <?php } ?>
             </div>
+            <div class="modal-body profile-body">
+                <div class="modal-body-head">
+                    <div class="modal-body-name">
+                        <div class="profile-name">
+                            <div class="name-age1 ">
+                                <div>
+                                    <?php echo strtoupper($username) . ', '; ?>
+                                </div>
+                                <div>
 
-        </section2>
+                                    <?php echo $usreage; ?>'
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-headline">
+                            <?php if (!empty($userheadline)) {
+                                echo $userheadline;
+                            } else {
+                                echo "...";
+                            } ?>
+                        </div>
+                    </div>
+                    <div class="modal-body-icon">
+                        <img src="">
+                    </div>
+                </div>
+                <div class="modal-body-about">
 
+                    <h5>About:</h5>
+                    <p><?php if (!empty($userabout)) { ?>
+
+                            <?php echo $userabout;  ?>
+
+                        <?php } else {
+                            echo "...";
+                        } ?></p>
+
+
+                </div>
+                <div class="modal-body-intrests">
+                    <h5>Interest:</h5>
+                    <div class="interests">
+                        <?php if (!empty($userinterest)) {
+                            $interests = explode(',', $userinterest);
+                            foreach ($interests as $interest) { ?>
+                                <div class="interst"><?php echo $interest; ?></div>
+                            <?php }
+                        } else { ?>
+                            <p>...</p>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
     </div>
-
-    <footer>
-        <div class="bg"></div>
-    </footer>
-
-</body>
-
-</html>
+</div>
