@@ -1,10 +1,5 @@
 <?php
-session_start();
-
-$conn = mysqli_connect('localhost', 'root', '', 'chyeh');
-if (!$conn) {
-    echo 'connection error' . mysqli_connect_error();
-}
+include('config.php');
 $email = $_SESSION["email"];
 $gender = $_SESSION["gender"];
 $mainUeser = array();
@@ -48,7 +43,7 @@ for ($z = 1; $z < count($usersAnswers); $z++) {
     }
 }
 $userm = $users[$max];
-$sql = "SELECT username,datedenaissance,img FROM compts WHERE email = '$userm'";
+$sql = "SELECT * FROM compts WHERE email = '$userm'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -58,5 +53,12 @@ if ($result->num_rows > 0) {
         $username = $row["username"];
         $userdate = $row["datedenaissance"];
         $userimg = $row["img"];
+        $userheadline = $row["Headline"];
+        $userabout = $row["about"];
+        $userinterest = $row["interests"];
+        $userdate = explode("-", $userdate);
+        $usreage = (date("md", date("U", mktime(0, 0, 0, $userdate[1], $userdate[2], $userdate[0]))) > date("md")
+            ? ((date("Y") - $userdate[0]) - 1)
+            : (date("Y") - $userdate[0]));
     }
 }

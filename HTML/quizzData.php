@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'chyeh');
+include('config.php');
 $errors = '';
 $q = '';
 session_start();
