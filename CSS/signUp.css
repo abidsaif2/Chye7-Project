@@ -4,234 +4,180 @@
   padding: 0;
   font-family: 'Montserrat',Arial, Helvetica, sans-serif;
 }
-body{
-  background-color: #EEEBDD;
+
+section .background{
+    background-image: url("../assets/signin.png") ;
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 1200px;
 }
 
-/* header section */
+.bg_lbara{
+    display: flex;
+}
 
-header .bg{
-    width: 100%;
-    height: 70px;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
-    position:sticky ;
-    top: 0px;
-    background:#810000;
-  }
 
-header .title {
-    color: #EEEBDD;
-    font-size: 40px;
+.title{
+    font-size: 80px;
+    color: white;
+    font-weight: 400;
+    margin: 30px;
+}
+
+.top_form{
+    display: flex;
+}
+
+.quit{
+    display: flex;
+    margin: -40px 0 0 80px;
+
+}
+
+.form_bg{
+    display: flex;
+    justify-content: center;
+    width: 550px;
+    height: 900px;
+    left: 900px;
+    background-color: #2D2D2D;
+    color: white;
+    position: relative;
+    border-radius: 10px;
+}
+
+.form_bg form{
+    margin: 20px 0 0 0;
+}
+
+.title_2{
+    font-size: 35px;
     font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -45px;
+    margin-bottom: 40px;
 }
 
-header .back_bg {
-    display: flex;
-    justify-content: flex-start;
-    align-self: center;
-    margin-left: 20px;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+#img_place  img{
     width: 80px;
-    height: 50px;
-    border-radius: 25px;
+    margin-bottom:15px;
 }
 
-header .back{
-    display: flex;
-    justify-content: flex-start;
-    align-self: center;
-    margin-left: 20px;
-}
-
-@media (max-width:320px){
-    header .title{
-        margin-left: 40px;
-    }
-}
-
-/* main section  */
-
-.sec1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #EEEBDD;
-}
-
-.sec1 .bg1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #641414;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 50px;
-    width: 600px;
-    height: 750px;
-    margin-top: 150px;
-    margin-bottom: 150px;
-}
-
-.sec1  .bg2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #C4C4C4;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 40px;
-    width: 65%;
-    height: 90%;
-}
-
-.sec1 .img_h{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20%;
-}
-
-.sec1 .img_place_holder{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px; 
-    background-color: #EEEBDD;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-}
-form {
-    height: 100%;
-    width: 100%;
-}
-.form-div-txt{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 80%;
-}
-.form-div {
-    height: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 65%;
-}
-
-/*.sec1 .img_place_holder .upload_img{
-
-}*/
-
-
-.sec1 #fname,#fmail,#fmdp,#fbirth{
-    background-color: #EEEBDD;
-    border-color: #EEEBDD;
-    border-style: none;
-    border-radius: 50px;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-    width: 250px;
-    height: 50px;
-}
-
-.sec1 #fname::placeholder{
-    font-size: 14px;
-    color: black;
-    padding-left: 45px;
-}
-
-.sec1 #fmail::placeholder{
-    font-size: 14px;
-    color: black;
-        padding-left: 45px;
-}
-
-.sec1 #fmdp::placeholder{
-    font-size: 14px;
-    color: black;
-    padding-left: 45px;
-}
-
-.sec1 #fbirth::placeholder{
-    font-size: 14px;
-    color: black;
-}
-
-.sec1 .radio_btn{
-    cursor: pointer;
-    font-size: 20px;
-    width: 65%;
-}
-
-.sec1 .radio_btn input{
-    cursor: pointer;
-    width: 20px;
-}
-.radios-div {
+.form_radio{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: space;
 }
 
-.sec1 #fmale input{
-    background-color: #EEEBDD;
+.form_input{
+    padding-bottom: 20px;
+}
+
+.form_input label{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.form_input input{
+    height: 40px;
+    margin-top: 15px;
+    width: 400px;
     color: white;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    border: 2px;
+    border-color: white;
+    border-style: solid;
+    background-color: #2D2D2D;
 }
 
-.sec1 #female input{
-    background-color: #EEEBDD;
-    color: white;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+.radio2 input{
+    margin-left: 15px;
 }
 
-/* submit button */
+.radio label{
+    margin-left: 10px;
+    font-size: 20px;
+}
 
-.sec1 .sub_btn{
+.radio2 label{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.last_container{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10%;
+    margin-top: 15px;
+    justify-content: space-between;
 }
 
-.sec1 .sub_btn > .btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 350px;
-    width: 150px;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-    background-color: #EEEBDD;
+.login{
+    font-size: 15px;
+    font-weight: 500;
 }
 
-
-/* footer */
-
-footer{
-    background:#810000;
-    padding: 15px 23px;
-    color: #fff;
-    text-align: center;
-}
-footer span a{
-    color:#EEEBDD;
+.login a{
     text-decoration: none;
+    color: white;
+    font-weight: 700;
 }
 
-@media (min-width:320px) and (max-width:375px){
-    .sec1 .bg1{
-        width:90%;
-    }
-    .sec1 .bg2{
-        width:85%;
+.sub_btn input{
+    background-color: #1D1D1B;
+    color: white;
+    width: 160px;
+    height: 45px;
+}
+
+
+@media (min-width:1024px) and (max-width:1440px){
+
+    .form_bg{
+        width: 500px;
+        margin-left: -350px;
     }
 }
-form p {
-    color: red;
-    margin: 0;
+
+ @media (min-width:768px) and (max-width:1071px){
+
+    .form_bg{
+        display: flex;
+        justify-content: center;
+        width: 350px;
+        margin-left: -500px;
+    }
+
+    .title_2{
+        display: flex;
+        font-size: 25px;
+    }
+
+    .form_input input{
+
+        width: 300px;
+    }
 }
+
+
+@media (min-width:320px) and (max-width:768px) {
+    .background{
+        height: 100px;
+        background-position:center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .title_2{
+        font-size: 20px;
+    }
+    .form_bg{
+        width: 300px;
+        margin-left: -890px;
+    }
+
+    .form_input input{
+        width: 250px;
+    }
+    .sub_btn input{
+        width: 100px;
+    }
+
+}  
