@@ -48,37 +48,24 @@ if (isset($_POST['submit'])) {
     }
 }
 
-if (isset($_POST['submit1'])) {
-    if ((!empty(htmlspecialchars($_POST['email']))) and (!empty(htmlspecialchars($_POST['newEmail']))) and (!empty(htmlspecialchars($_POST['cNewEmail'])))) {
-        $newpwd = htmlspecialchars($_POST['newEmail']);
-        if (!filter_var($newemail, FILTER_VALIDATE_EMAIL)) {
-            $errors['email'] = 'email must be a valid email address';
-        } else if (htmlspecialchars($_POST['email']) != $email) {
-            $errors['email'] = 'email must be correct';
-        } else if ($newemail != htmlspecialchars($_POST['cNewEmail'])) {
-            $errors['email'] = 'email must be correct';
-        } else {
-            $sql = "UPDATE compts SET email='$newemail' WHERE email='$email'";
-            mysqli_query($conn, $sql);
-            $_SESSION["email"] = $newemail;
-            $email = $_SESSION["email"];
-        }
-    }
-}
 if (isset($_POST['submit2'])) {
-    if ((!empty(htmlspecialchars($_POST['PWD']))) and (!empty(htmlspecialchars($_POST['newPWD']))) and (!empty(htmlspecialchars($_POST['cNewPWD'])))) {
-        $newpwd = htmlspecialchars($_POST['newPWD']);
-        $sql = "SELECT * FROM compts WHERE email='$email'";
-        $result = $conn->query($sql);
-        $row = $result->fetch_assoc();
-        $PWD = $row['passwords'];
-        if (htmlspecialchars($_POST['PWD']) != $PWD) {
+    if ((!empty(htmlspecialchars($_POST['email']))) and (!empty(htmlspecialchars($_POST['PWD']))) and (!empty(htmlspecialchars($_POST['newPWD']))) and (!empty(htmlspecialchars($_POST['cNewPWD'])))) {
+        if (htmlspecialchars($_POST['email']) != $email) {
             $errors['email'] = 'email must be correct';
-        } else if ($newpwd != htmlspecialchars($_POST['cNewPWD'])) {
-            $errors['pwd'] = 'pwd must be correct';
         } else {
-            $sql = "UPDATE compts SET passwords='$newpwd' WHERE email='$email'";
-            mysqli_query($conn, $sql);
+            $newpwd = htmlspecialchars($_POST['newPWD']);
+            $sql = "SELECT * FROM compts WHERE email='$email'";
+            $result = $conn->query($sql);
+            $row = $result->fetch_assoc();
+            $PWD = $row['passwords'];
+            if (htmlspecialchars($_POST['PWD']) != $PWD) {
+                $errors['email'] = 'email must be correct';
+            } else if ($newpwd != htmlspecialchars($_POST['cNewPWD'])) {
+                $errors['pwd'] = 'pwd must be correct';
+            } else {
+                $sql = "UPDATE compts SET passwords='$newpwd' WHERE email='$email'";
+                mysqli_query($conn, $sql);
+            }
         }
     }
 }
