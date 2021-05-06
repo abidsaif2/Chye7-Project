@@ -6,115 +6,178 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>chye7</title>
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/newstyle.css">
     <?php include('login.php'); ?>
 </head>
 
 <body>
-    <header style="z-index: 10;">
 
-        <nav>
-            <div class="chye7">
-                <h1>CHYEH</h1>
-            </div>
-            <div class="nav-btns">
-                <div>
-                    <a href="SignUp.php">
-                        Sign UP
-                    </a>
-                </div>
-                <div>
-                    <a class="login-a" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Login
-                    </a>
-                </div>
-            </div>
-        </nav>
-
-    </header>
     <main>
 
+        <div class="first">
+            <div class="first-div">
+                <div class="heade">
+                    <nav>
+                        <div class="chye7">
+                            <h1>CHYEH</h1>
+                        </div>
+                        <div class="nav-btns">
+                            <div class="hov">
+                                <a href="SignUp.php">
+                                    Register
+                                </a>
+                            </div>
+                            <div class="hov" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <a class="login-a">
+                                    LogIn
+                                </a>
+                            </div>
 
-        <div class="bestmatch">
-            <div class="img-div1">
-                <div class="bestmatch-img">
-
+                        </div>
+                    </nav>
                 </div>
-                <div class="bestmatch-img-background">
+                <div class="bestmatch">
+                    <div class="bestmatch-txt txt">
 
-                </div>
-            </div>
-            <div class="bestmatch-txt">
-                <div class="txt">
-                    <div>
-                        <h1>Your Best Match</h1>
-                    </div>
-                    <div>
-                        <p style="color:#810000 ;"> We introduce CHYEH, your ultimate guide to find the love of your
-                            life.
-                            Tired of looking around to find your best match ? Tired of being single and feeling alone
-                            all
-                            day-long ?
-                            What if we told you that your best match is a fellow orendian too ? Wouldn't you be excited
-                            to
-                            know
-                            who exactly of your team-mates is your soulmate ?
-                            Subscribe now and take our free Quizz in order to find out whith whom you match best ! </p>
-                    </div>
-                    <div class="btn-div">
-                        <a href="SignUp.php" id="start" class="btn btn-start bt1">Sign Up</a>
+                        <div>
+                            <div>
+
+                                <h1>Your Best Match</h1>
+                            </div>
+                            <div>
+                                <p style="color:white; text-align: center;"> We introduce CHYEH, your ultimate guide to
+                                    find the love of your
+                                    life.
+                                    Tired of looking around to find your significant other ?
+                                    What if we told you that your best match is a fellow orendian too ? Wouldn't you be
+                                    excited
+                                    to
+                                    know
+                                    who exactly of your team-mates is your soulmate ?
+                                    Subscribe now and take our free Quizz in order to find out with whom you match best
+                                    ! </p>
+                            </div>
+                        </div>
+                        <div class="btn-div">
+                            <a id="start" class="btn btn-start bt1" style=" color: white; " href="SignUp.php">Find Your Lover</a>
+
+                        </div>
+
+                        <img src="../assets/orenda.png" class="orenda">
+
+
                     </div>
 
                 </div>
             </div>
         </div>
 
-
-        <div class="what-we-do ">
-            <div class="what-we-do-txt">
-                <div class="txt2">
-                    <h1> What We Do</h1>
-                    <p> We create meaningful connections <br> that spark hearts and inspire people <br> to share
-                        themselves
-                        authentically <br> and enthusiastically.</p>
-                </div>
-            </div>
-            <div class="what-we-do-img">
-
-            </div>
-        </div>
 
         <div class="us">
-            <div class="made-txt">
-                <h4>Made By</h4>
+            <div class="what-we-do ">
+                <div class="what-we-do-txt">
+                    <div class="txt2">
+                        <h6> What We Do</h6>
+                        <p> We create meaningful connections that spark hearts <br>and inspire people to share
+                            themselves
+                            authentically.</p>
+                    </div>
+                </div>
             </div>
             <div class="box-area">
                 <div>
-                    <div class="single-box saif">
+                    <div class="single-box step1">
                     </div>
-                    <div>Saif Abid</div>
+                    <div class="color">Step 1 </div>
+                    <div class="writing">Create an Account</div>
                 </div>
                 <div>
-                    <div class="single-box zayneb">
+                    <div class="single-box step2">
 
                     </div>
-                    <div>
-                        Zayneb Jalled
+                    <div class="color">
+                        Step 2
                     </div>
+                    <div class="writing">Take Our Quizz</div>
                 </div>
                 <div>
-                    <div class="single-box ayoub">
-
+                    <div class="single-box step3">
                     </div>
-                    <div>
-                        Mohamed Ayoub Jouini
+                    <div class="color">
+                        Step 3
                     </div>
+                    <div class="writing">Find Who Your Lover Is</div>
                 </div>
 
             </div>
         </div>
 
+        <div id="des" class="description">
+            <h2>Description</h2>
+            <div class="people">
+                <div class="grandcadre col-md-7 col-sm-12">
+                    <div class="cadre">
+                        <h4>Easiest way to find your soulmate</h4>
+                        <h3 style="font-style: bold;">"the heart knows when the search is over"</h3>
+                        <p>When looking for our soulmates we tend to focus
+                            on some things in particular, like the way
+                            they perceive life and the way they live it.
+                            And because we want to make it easy for you,
+                            simply taking our Quizz will determine the person
+                            to whom your heart will pound. All you need to do is,
+                            to register, create an account, and there you have it,
+                            the last step, take the Quizz ! </p>
+                    </div>
+                </div>
+                <div class="img1 col-md-5 col-sm-12">
+                    <img class="imgg" src="../assets/heart.svg">4
+                </div>
+
+            </div>
+        </div>
+        <div class="team">
+
+            <div class="cadrage ">
+                <h5>Team</h5>
+                <div class=" a">
+
+                    <div class="a1">
+
+                        <h6>Saif Abid</h6>
+                        <p style="color: white;">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="photo seif"></div>
+                    <div class="blanc"> </div>
+
+                </div>
+                <div class=" a">
+
+                    <div class="a1" style="background: rgba(87, 53, 119, 0.45);">
+
+                        <h6>Zeineb Jalled</h6>
+                        <p style="color: white;">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="photo zeineb"></div>
+                    <div class="blanc"> </div>
+
+                </div>
+                <div class=" a">
+
+                    <div class="a1">
+
+                        <h6>Ayoub Jouini</h6>
+                        <p style="color: white;">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="photo ayoub"></div>
+                    <div class="blanc"> </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        </div>
     </main>
 
     <footer>
@@ -124,8 +187,7 @@
         <br>
         <span>Created By Chmenka Team</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
     </footer>
-
-    <!--log in -->
+    <!--log in 
     <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content box">
@@ -166,10 +228,40 @@
                 </div>
             </div>
         </div>
+    </div>-->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content login-content">
+                <div class="modal-body">
+                    <form action="index.php" method="POST">
+                        <div class="modal-first">
+                            <img src="../assets/Groupe 4.svg" data-bs-dismiss="modal" aria-label="Close">
+                            <h5>Log in</h5>
+                        </div>
+                        <div class="modal-second">
+                            <div>
+                                <label>E-mail</label>
+                                <input type="email" placeholder="E-mail" name="email" value="<?php echo $email; ?>">
+                                <span class="invalid-feedback"><?php echo $email_err; ?></span>
+                            </div>
+                            <div>
+                                <label>Password</label>
+                                <input type="password" placeholder="Password" name="password">
+                                <span class="invalid-feedback"><?php echo $password_err; ?></span>
+                            </div>
+                        </div>
+                        <div class="modal-third">
+                            <input type="submit" value="Log in">
+                            <p>you don't have an account? <a href="SignUp.php">sign up</a></p>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
     </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script></script>
 </body>
 
 </html>

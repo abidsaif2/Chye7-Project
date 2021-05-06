@@ -4,21 +4,25 @@
   padding: 0;
   font-family: 'Montserrat',Arial, Helvetica, sans-serif;
 }
-body{
-  background: url(../assets/mainpagebackgr.jpg);
+.first{
+  width: 100%;
+  background-image: url(../assets/mainpagebackgr.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+}
+.first-div{
+  background-color:rgba(0, 0, 0,0.4) ;
 }
 a{
   text-decoration: none;
 }
 /* nav-bar*/
-header {
+.heade {
   width: 100%;
   height: 70px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
-  position:sticky ;
   top: 0px;
   background: transparent;
+  
 }
  
 nav {
@@ -31,15 +35,24 @@ nav {
   color: #EEEBDD;
 }
 .nav-btns {
-  width: 50%;
+  width: 30%;
   display: flex;
   justify-content: space-around;  
+  align-items: flex-end;
 }
+.hov {
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+margin:5px;
+}
+.hov:hover{
+  background:rgba(198,187,255,0.45) ;
+}
+
 .nav-btns a{
   color: #fcfcfc;
 }
 .nav-btns div {
-  
   width: 150px;
   height: 30px;
   border-radius: 50px;
@@ -71,43 +84,39 @@ nav {
   
 /*main*/
 .bestmatch{
-  margin-top: -120px;
   width: 100%;
   height: 800px;
   display: flex;
-  justify-content: space-between;
-  grid-row: 2/3;
-  grid-column: 1/3;
-}
-.img-div1, .bestmatch-txt {
-  width: 50%;
 }
 .bestmatch-txt{
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  font-weight: 900;
-  width: 100%;
-    grid-row: 1/2;
-    text-align: justify;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.3rem;
+  width: 50%;
+  height: 600;
+  margin: 100px 25%;
 }
-.txt {
-  width: 60%;
+.orenda{
+width: 160px;
+  height:60px;
+  
 }
-
+.arrowdown {
+  width:70px;
+  height: 70px;
+ 
+}
 .bestmatch-txt div h1 {
   color:white ;
-  font-size: 50px;
   text-align: center;
   font-weight: bolder;
 }
-.bestmatch-txt div p {
-  font-weight: 900;
-  
-}
 .bt1{
   font-size: 20px;
-  background: #7769be;
+  background: rgba(198,187,255,0.45);
   border-radius: 10px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
   margin-top: 80px;
@@ -118,7 +127,6 @@ nav {
 .btn-div {
   color:#ffffff;
  width: 60%;
- margin:0 20%;
  display: flex;
  justify-content: space-around;
 }
@@ -128,19 +136,14 @@ nav {
   
   }
   .bestmatch{
-    margin-top: 150px;
-    display: grid;
-    grid-template-rows: 60% 40%;
+    margin-top: 100px;
   }
  
   .bestmatch-txt {
     width: 100%;
-    grid-row: 1/2;
     text-align: justify;
-   
-  }
-  .txt {
-    width: 90%;
+    margin: 0;
+    padding: 30px;
   }
   .bestmatch-txt div h1 {
     text-align: center;
@@ -148,28 +151,23 @@ nav {
   .btn-div {
     display: flex;
     align-items: center;
-    margin-bottom: 150px;
+    margin-bottom: 60px;
   
   }
 }
 /* what we do */
 .what-we-do {
-  height: 50px;
-  display: grid;
-  grid-template-rows: auto 30% 20%;
-  grid-template-columns: 20% auto 20%;
   margin-bottom: 100px;
 }
 .what-we-do-txt {
   color: #E5E5E5;
-  grid-row: 1/3;
-  grid-column: 1/4;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  font-style: bold;
+  height: 100%;
+  padding: 5px;
 }
 .txt2 {
   margin-top: 30px;
@@ -184,35 +182,25 @@ nav {
 }
 
 @media (max-width:768px){
-  .what-we-do-txt {
-    font-style: bold;
-  }
   .what-we-do {
-   
-    height: 100px;
-    grid-template-rows: auto 20% 10%;
-    grid-template-columns: 10% auto 10%;
-    margin-top: -50px;
+    height: 200px;
     margin-bottom: -10px;
   }
   .txt2 h6 {
-    font-size: 15px;
+    font-size: 1.7rem;
   }
   .txt2 p {
     font-size: 16px;
     margin-top: 20px;
   }
 }
-.upper {
-  background: #1d1d1b;
-  height: 700px; 
-}
 /*us*/
 .us {
   background-image: url(../assets/alter.jpg);
   background-size: cover;
   text-align: center;
-  height: auto; 
+  height: auto;
+  margin: -2px 0 ; 
 }
 
 .box-area {
@@ -220,21 +208,20 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    color: black;
 }
   
 .single-box { 
   display: flex;
   align-items: center;
   justify-content: center ;
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   text-align:center ;
   margin:50px ;
   border-radius: 50%;
   margin-top: 130px;
-}
-.box-area{
-  color: black;
+  background: rgba(100,77,122,0.45);
 }
 .step1
 {
@@ -263,58 +250,84 @@ nav {
 
 
 /*login*/
-.box{
-  padding: 40px;
-  text-align: center;
-  background:#810000;
-  border-radius: 5%;
-  height: 600px;
+.login-content {
+  background-color: #1d1d1b;
+  color: white;
+  height: 700px;
 }
-.box h1{
-color: #E5E5E5 ;
-font-weight: 500;
+.modal-body {
+  height: 100%;
 }
-
-
-.box input[type="email"], .box input[type="password"] {
-  background: #e5e5e5;
-  border: 0;
+form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.modal-first {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 30px;
+}
+.modal-first img {
+  width: 50px;
+  height: 50px;
+}
+.modal-first h5 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 25px;
+}
+.modal-second {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 30px;
+}
+.modal-second div {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.modal-second label {
+  font-size: 1.5rem;
+} 
+.modal-second input {
+  height: 50%;
+  background-color:#1d1d1b ;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #6b50f2;
+  padding: 5px;
+  color: white;
+}
+.modal-second span {
   display: block;
-  margin: 20px auto;
-  text-align: center;
-  border: 2px solid #ddd6f3;
-  padding: 14px 10px;
-  width: 300px;
-  outline: none;
-  border-radius: 24px;
-  transition: 0.25s;
-
 }
-
-.box input[type="email"]:focus, .box input[type="password"]:focus {
-width: 320px; 
-border-color: #000000 ; 
+.modal-third {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.box input[type="submit"] {
-  background: #E5E5E5;
-  border: 0;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-  border: 2px solid #e5E5E5 ;
-  padding: 14px 40px;
-  cursor: pointer;
-  outline: none;
-  color: rgb(0, 0, 0);
-  border-radius: 24px;
-  transition: 0.25s;
+.modal-third input {
+  width: 75%;
+  height: 43%;
+  margin: 10px 0;
+  border-style: none;
+  border-radius: 20px;
+  background-color: #6b50f2;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
-
-.del{
-  width: 20px;
-  margin-left: 280px;
-}
-
 /*descr*/ 
 .description {
   background: #1d1d1b;
@@ -346,7 +359,6 @@ align-items: center;
   align-items: left;
 }
 .imgg {
-  margin-top: 240px;
   width: 100%;
 }
 @media (max-width:768px){ 
@@ -358,6 +370,9 @@ align-items: center;
   .imgg{
     margin: 5px;
     
+  }
+  .description {
+    height: 900px;
   }
 }
 /*team*/
@@ -410,12 +425,15 @@ background: #1d1d1b;
 }
 .seif {
   background-image: url(../assets/saif.jpg);
+  background-size: cover;
 }
 .zeineb {
   background-image: url(../assets/zeineb.jpg);
+  background-size: cover;
 }
 .ayoub {
   background-image: url(../assets/ayoub.jpg);
+  background-size: cover;
 }
  
 @media (max-width:768px){ 

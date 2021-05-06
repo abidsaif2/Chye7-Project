@@ -62,13 +62,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         } else {
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid email or password.";
-                            echo "Invalid password.";
+                            $password_err = "Invalid password.";
                         }
                     }
                 } else {
                     // email doesn't exist, display a generic error message
                     $login_err = "Invalid email or password.";
-                    echo "Invalid email";
+                    $email_err = "Invalid email";
                 }
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
