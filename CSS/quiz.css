@@ -25,7 +25,6 @@ section .back1{
     height: auto;
     background-size: 100% 100%;
     color: white;
-    border-radius: 15px 15px 0 0;
 }
 
 .quit{
@@ -66,7 +65,6 @@ section .back1{
 
 .back2{
     background-color: #EEEBFC;
-    border: black solid 1px;
     border-radius: 0 0 10px 10px;
 }
 
@@ -120,6 +118,41 @@ section .back1{
 input:checked + .rounded{
     border: solid rgb(12, 202, 60) 3px;
 }
+
+.color-change-4x {
+	-webkit-animation: color-change-4x 26s linear infinite alternate both;
+	        animation: color-change-4x 26s linear infinite alternate both;
+}
+
+ @-webkit-keyframes color-change-4x {
+    0% {
+        background: #2C225E;
+      }
+      33.3333% {
+        background: #b22cff;
+      }
+      66.666% {
+        background: #1D1D1B;
+      }
+      100% {
+        background: #EEEBFC;
+      }
+  }
+  @keyframes color-change-4x {
+    0% {
+        background: #1D1D1B;
+      }
+      33.3333% {
+        background: #EEEBFC;
+      }
+      66.666% {
+        background: #2C225E;
+      }
+      100% {
+        background: #b22cff;
+      }
+  }
+
 
 @media (max-width:320px){
     section{
