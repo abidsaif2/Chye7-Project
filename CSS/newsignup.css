@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+}
+
+section .background{
+    background-image: url("../assets/signin.png");
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 1200px;
+}
+
+.bg_lbara{
+    display: flex;
+}
+
+
+.title{
+    font-size: 80px;
+    color: white;
+    font-weight: 400;
+    margin: 30px;
+}
+
+.top_form{
+    display: flex;
+}
+
+.quit{
+    display: flex;
+    margin: -40px 0 0 80px;
+
+}
+
+.form_bg{
+    display: flex;
+    justify-content: center;
+    width: 550px;
+    height: 900px;
+    left: 900px;
+    background-color: #2D2D2D;
+    color: white;
+    position: relative;
+    border-radius: 10px;
+}
+
+.form_bg form{
+    margin: 20px 0 0 0;
+}
+
+.title_2{
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+#img_place  img{
+    width: 80px;
+    margin-bottom:15px;
+}
+
+.form_radio{
+    display: flex;
+    flex-direction: row;
+}
+
+.form_input{
+    padding-bottom: 20px;
+}
+
+.form_input label{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.form_input input{
+    height: 40px;
+    margin-top: 15px;
+    width: 400px;
+    color: white;
+    border: 2px;
+    border-color: white;
+    border-style: solid;
+    background-color: #2D2D2D;
+}
+
+.radio2 input{
+    margin-left: 15px;
+}
+
+.radio label{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.radio2 label{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.last_container{
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.login{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.login a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+.sub_btn input{
+    background-color: #1D1D1B;
+    color: white;
+    width: 160px;
+    height: 45px;
+}
+
+
+@media (min-width:1024px) and (max-width:1440px){
+
+    .form_bg{
+        width: 500px;
+        margin-left: -350px;
+    }
+}
+
+ @media (min-width:768px) and (max-width:1071px){
+
+    .form_bg{
+        display: flex;
+        justify-content: center;
+        width: 350px;
+        margin-left: -500px;
+    }
+
+    .title_2{
+        display: flex;
+        font-size: 25px;
+    }
+
+    .form_input input{
+
+        width: 300px;
+    }
+}
+
+
+@media (min-width:320px) and (max-width:768px) {
+    .background{
+        height: 100px;
+        background-position:center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .title_2{
+        font-size: 20px;
+    }
+    .form_bg{
+        width: 300px;
+        margin-left: -890px;
+    }
+
+    .form_input input{
+        width: 250px;
+    }
+    .sub_btn input{
+        width: 100px;
+    }
+
+}  
