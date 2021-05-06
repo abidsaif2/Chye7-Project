@@ -69,7 +69,6 @@
                                             <input type="radio" id="female" name="gender" value="female">
                                             <label for="female">Female</label>
                                         </div>
-                                        <p><?php echo $errors['form_radio']; ?></p>
                                     </div>
 
                                     <div class="last_container">
