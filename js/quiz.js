@@ -1,120 +1,88 @@
-var main_Section = document.getElementById("section1");
-
-var bg1 = document.createElement("div");
-bg1.className = "bg1";
-main_Section.appendChild(bg1);
-
-var bg2 = document.createElement("div");
-bg2.className = "bg2";
-bg1.appendChild(bg2);
+var main_Section = document.querySelector(".back2");
 
 var form = document.createElement("form");
-form.setAttribute("id", "form")
+form.setAttribute("id","form")
 
-bg2.appendChild(form)
+main_Section.appendChild(form)
 
-var title = document.createElement("p");
-title.className = "title_2";
-form.appendChild(title)
+function form_template(numb,question,options){
 
-var form_check = document.createElement("div");
-form_check.className = "form-check";
-form.appendChild(form_check)
+            form.innerHTML = `
+            <form id="form" action="quizData.php" method="POST">
 
-var input_element = document.createElement("input");
-input_element.className = "form-check-input radio_btn_input";
-input_element.setAttribute('type', 'radio');
-input_element.setAttribute('name', 'flexRadioDefault');
-input_element.setAttribute('id', 'flexRadioDefault2');
+            <div class="back3">
+                <p class="text">
+                    ${question}
+                </p>
+            </div>
+                             
+            <label class="checkbox">
+                <input type="checkbox" value="a" id="quiz_input" class="checkbox" name="quiz_input">
+                <span class="rounded">
+                    <span class="txtt">
+                          ${options[0]}
+                     </span>
+                </span>
+            </label>
 
-form_check.appendChild(input_element);
+            <label class="checkbox">
+                <input type="checkbox" value="b" id="quiz_input" class="checkbox" name="quiz_input">
+                <span class="rounded">
+                    <span class="txtt">
+                          ${options[1]}
+                     </span>
+                </span>
+            </label>
 
-var label_element = document.createElement("label");
-label_element.className = "form-check-label radio_btn";
-input_element.setAttribute('for', 'flexRadioDefault');
+            <label class="checkbox">
+                <input type="checkbox" value="c" id="quiz_input" class="checkbox" name="quiz_input">
+                <span class="rounded">
+                    <span class="txtt">
+                          ${options[2]}
+                     </span>
+                </span>
+            </label>
 
-form_check.appendChild(label_element);
+            <label class="checkbox">
+                <input type="checkbox" value="d" id="quiz_input" class="checkbox" name="quiz_input">
+                <span class="rounded">
+                    <span class="txtt">
+                          ${options[3]}
+                     </span>
+                </span>
+            </label>
 
-var btn = document.createElement("div");
-btn.className = "btn_bg";
-form.appendChild(btn);
+            <div class="btn_sub">
+                <button class="btn_txt" id="btn_txt" type="submit" onclick="next(event)">NEXT QUESTION</button>
+            </div>
 
-var btn_Texte = document.createElement("div");
-btn_Texte.className = "btn_txt";
-btn_Texte.setAttribute('id', 'btn_txt')
-btn.appendChild(btn_Texte);
+        </form>
+        
+        <script type="text/javascript">
+            $('.txtt').click(function() {
+                $(this).siblings('input:checkbox').prop('checked' , false);
+            });
+        </script>
 
-function form_template(numb, question, options) {
+        `
+          
+   }
 
-  form.innerHTML = `
-              <form id="form" name="form">
+  let count =0;
 
-              <p class="title_2">${question}</p>
-              <input type="hidden" id="custId" name="fid" value="${numb}">
+   function next(event){
+          count++   
 
-             <div class="form-check">
-                 <input class="form-check-input radio_btn_input" type="radio" name="fradio" id="flexRadioDefault1" value="a">
-                 <label class="form-check-label radio_btn" for="flexRadioDefault1">
-                    ${options[0]}
-                 </label>
-               </div>
-               <div class="form-check">
-                 <input class="form-check-input radio_btn_input" type="radio" name="fradio" id="flexRadioDefault2" value="b">
-                 <label class="form-check-label radio_btn" for="flexRadioDefault2">
-                    ${options[1]}
-                 </label>
-               </div> 
+          event.preventDefault(event)
 
-               <div class="form-check">
-                 <input class="form-check-input radio_btn_input" type="radio" name="fradio" id="flexRadioDefault2" value="c">
-                 <label class="form-check-label radio_btn" for="flexRadioDefault2">
-                    ${options[2]}
-                 </label>
-               </div> 
-             
-               <div class="form-check">
-                 <input class="form-check-input radio_btn_input" type="radio" name="fradio" id="flexRadioDefault2" value="d">
-                 <label class="form-check-label radio_btn" for="flexRadioDefault2">
-                   ${options[3]}
-                 </label>
-               </div> 
-             
-               <div class="btn_bg">
-                   <input class="btn_txt" id="btn_txt" type="submit" placeholder="Continue" onclick="next(event)">
-               </div>
+          var questions = fetch("../js/quiz_question.json").then( response => response.json() )
 
-             </form>`
+          questions.then((data) => {
+            form_template(data[count].numb, data[count].question, data[count].options)
+          })
+     }  
 
-}
-let count = 0;
-
-
-function next(event) {
-  count++;
-
-  event.preventDefault(event);
-  $.ajax({
-    url: "quizzData.php",
-    method: "post",
-    data: $('form').serialize(),
-    success: function (res) {
-      console.log(res)
-    }
-  })
-
-  if (count <= 12) {
-    var questions = fetch("../js/quiz_question.json").then(response => response.json())
-
-    questions.then((data) => {
-      form_template(data[count].numb, data[count].question, data[count].options)
-    })
-  }
-  if (count > 12) {
-    window.location.href = "profile.php";
-  }
-}
-
-var questions = fetch("../js/quiz_question.json").then(response => response.json())
+var questions = fetch("../js/quiz_question.json").then( response => response.json() )
 
 questions.then((data) => {
   form_template(data[count].numb, data[count].question, data[count].options)
