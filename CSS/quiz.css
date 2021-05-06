@@ -4,139 +4,164 @@
     font-family: 'Montserrat',Arial, Helvetica, sans-serif;
 }
 
-body{
-    background-color: #EEEBDD;
+html{
+    display: flex;
+    justify-content: center;
+    background-color: #EEEBFC;
 }
 
-/* header title */
-
-header .bg{
-    background-color: #810000;
-    width: 100%;
-    height: 70px;
+section{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 550px;
+    background-color: #EEEBFC;
 }
 
-header .title {
-    color: #EEEBDD;
-    font-size: 40px;
-    font-weight: 600;
+section .back1{
+    background: url("../assets/romantic-date-with-stars-above-illustration-vector.jpg") ;
+    background-position:center center;
+    max-width: 100%;
+    height: auto;
+    background-size: 100% 100%;
+    color: white;
+    border-radius: 15px 15px 0 0;
+}
+
+.quit{
+    margin: 20px;
+}
+
+.title{
+    margin: 20px;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.sous_title{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    margin: 20px 20px 0 20px;
 }
 
-/* main section */
-
-.sec1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.sous_title img{
+    width: 30px;
+    margin: 0 0 15px 15px ;
 }
 
-.sec .title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #810000;
-    font-weight: 800;
-    margin-top: 40px;
-    font-size: 36px;
-}
-
-.sec1 .bg2 .title_2{
+.back3{
+    background-color: #9792B2;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 18px;
-    margin-bottom: 35px;
+    border-radius: 0 0 35px 35px;
+    height: 130px;
 }
 
-.sec1 .bg1{
+.back3 .text{
+    font-weight: 900;
+    margin: 25px;
+}
+
+.back2{
+    background-color: #EEEBFC;
+    border: black solid 1px;
+    border-radius: 0 0 10px 10px;
+}
+
+.btn_sub{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 160px;
-    background-color: #810000;
-    width: 600px;
-    height: 500px;
-    border-radius: 50px;
+    margin-bottom: 20px;
 }
 
-.sec1 .bg2{
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: 450px;
-    border-radius: 50px;
+.btn_txt, input[type="submit"], input[type="reset"]{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
-.sec1 .bg2 .title_2{
+.btn_txt{
+    background-color: #2C225E;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-weight: 700;
+    font-size: 25px;
+    border-radius: 25px;
+    width: 300px;
+    height: 65px;
+} 
+
+.checkbox input{
+   display: none;
 }
 
-.sec1 .bg2 .radio_btn{
-    color: white ;
-    margin-left: 100px;
-    padding-bottom: 30px;
+.checkbox{
+    margin: 30px;
 }
 
-.sec1 .bg2 .btn_bg{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #810000;
-    border-radius: 10px;
-    width: 150px;
-    height: 35px;
-    
+.checkbox .rounded{
+    border: solid #2C225E 1px;
+    box-shadow: 0px 0px 3px  #000000;
+    font-size: 20px;
+    border-radius: 100%;
 }
 
-.sec1 .bg2 .btn_txt input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #EEEBDD;
-    font-weight: 600;
-    cursor: pointer;
+.txtt{
+    margin: 100px 100px 100px 100px;
+ 
 }
 
-@media (min-width:320px) and (max-width:768px) {
+input:checked + .rounded{
+    border: solid rgb(12, 202, 60) 3px;
+}
 
-    .sec .title{
-        text-align: center;
+@media (max-width:320px){
+    section{
+        width: 300px;
     }
 
-    .sec1 .bg1 {
-        width: 100%;
-        height: 450px;
+    section .back1{
+       height: 200px;
     }
-    
-    .sec1 .bg2 {
-        width: 80%;
-        height: 400px;
+    .title{
+        font-size: 20px;
     }
-
- }
-
-/* footer section */
-
-footer{
-    background:#810000;
-    padding: 15px 23px;
-    color: #fff;
-    text-align: center;
+    .back3{
+        height: 80px;
+    }
+    .back3 .text{
+        font-size: 12px;
+    }
+    .btn_txt{
+        width: 250px;
+    }
 }
-footer span a{
-    color:#EEEBDD;
-    text-decoration: none;
+
+
+@media (max-width:768px){
+    section{
+        width: 300px;
+    }
+
+    section .back1{
+       height: 200px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .back3{
+        height: 80px;
+    }
+    .back3 .text{
+        font-size: 12px;
+    }
+    .btn_txt{
+        width: 250px;
+    }
 }

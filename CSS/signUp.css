@@ -6,7 +6,7 @@
 }
 
 section .background{
-    background-image: url("../assets/signin.png");
+    background-image: url("../assets/signin.png") ;
     background-position:center center;
     background-repeat: no-repeat;
     background-size: cover;
