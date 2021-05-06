@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="261.92" height="241.772" viewBox="0 0 261.92 241.772">
+  <g id="Icon_ionic-md-qr-scanner" data-name="Icon ionic-md-qr-scanner" transform="translate(-3.375 -4.5)">
+    <path id="Tracé_5" data-name="Tracé 5" d="M33.6,42.4a7.517,7.517,0,0,1,7.681-7.681H83.966V4.5H41.907C20.815,4.5,3.375,21.311,3.375,42.4V85.091H33.6Z" fill="#fff"/>
+    <path id="Tracé_6" data-name="Tracé 6" d="M66.187,4.5H23.625V34.722h42.31A7.837,7.837,0,0,1,73.994,42.4V85.091h30.222V42.4A37.848,37.848,0,0,0,66.187,4.5Z" transform="translate(161.079)" fill="#fff"/>
+    <path id="Tracé_7" data-name="Tracé 7" d="M73.994,64.558a7.517,7.517,0,0,1-7.681,7.681H23.625v30.851H66.313c21.092,0,37.9-17.44,37.9-38.532V22.5H73.994Z" transform="translate(161.079 143.182)" fill="#fff"/>
+    <path id="Tracé_8" data-name="Tracé 8" d="M41.278,72.24A7.517,7.517,0,0,1,33.6,64.558V22.5H3.375V64.558a38.777,38.777,0,0,0,38.532,38.532H83.966V72.24Z" transform="translate(0 143.182)" fill="#fff"/>
+  </g>
+</svg>
