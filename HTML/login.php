@@ -1,34 +1,34 @@
 <?php
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+include('config.php');
+session_start();
+if (isset($_SESSION['email'])) {
     header("location: profile.php");
-    exit;
-}
-$conn = mysqli_connect('localhost', 'root', '', 'chyeh');
-if (!$conn) {
-    echo 'connection error' . mysqli_connect_error();
 }
 $email = $password = "";
 $email_err = $password_err = $login_err = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if email is empty
-    if (empty(trim($_POST["email"]))) {
+    if (empty(trim(htmlspecialchars($_POST["email"])))) {
         $email_err = "Please enter email.";
     } else {
-        $email = trim($_POST["email"]);
+        $email = trim(htmlspecialchars($_POST["email"]));
     }
 
     // Check if password is empty
-    if (empty(trim($_POST["password"]))) {
+    if (empty(trim(htmlspecialchars($_POST["password"])))) {
         $password_err = "Please enter your password.";
     } else {
-        $password = trim($_POST["password"]);
+        $password = trim(htmlspecialchars($_POST["password"]));
     }
 
     // Validate credentials
     if (empty($email_err) && empty($password_err)) {
         // Prepare a select statement
         $sql = "SELECT email,username,passwords,img FROM compts WHERE email = ?";
+        $sql1 = "SELECT gender FROM compts WHERE email = '$email'";
+        $result = $conn->query($sql1);
+        $row = $result->fetch_assoc();
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
             // Bind variables to the prepared statement as parameters
@@ -49,25 +49,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if (mysqli_stmt_fetch($stmt)) {
                         if (strcmp($password, $hashed_password) == 0) {
                             // Password is correct, so start a new session
-                            session_start();
+
 
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["username"] = $username;
                             $_SESSION["email"] = $email;
+                            $_SESSION["gender"] = $row['gender'];
 
                             // Redirect user to welcome page
                             header("location:profile.php");
                         } else {
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid email or password.";
-                            echo "Invalid password.";
+                            $password_err = "Invalid password.";
                         }
                     }
                 } else {
                     // email doesn't exist, display a generic error message
                     $login_err = "Invalid email or password.";
-                    echo "Invalid email";
+                    $email_err = "Invalid email";
                 }
             } else {
                 echo "Oops! Something went wrong. Please try again later.";

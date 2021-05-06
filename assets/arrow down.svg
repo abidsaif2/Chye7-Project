@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <filter id="Ellipse_1" x="0" y="0" width="96" height="96" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Groupe_6" data-name="Groupe 6" transform="translate(-129 -901)">
+    <g transform="matrix(1, 0, 0, 1, 129, 901)" filter="url(#Ellipse_1)">
+      <circle id="Ellipse_1-2" data-name="Ellipse 1" cx="33" cy="33" r="33" transform="translate(15 10)" fill="#756682" opacity="0.45"/>
+    </g>
+    <g id="Groupe_2" data-name="Groupe 2" transform="translate(11)">
+      <g id="Groupe_1" data-name="Groupe 1" transform="translate(-0.5 6.25)">
+        <line id="Ligne_1" data-name="Ligne 1" y2="24" transform="translate(166.5 920.5)" fill="none" stroke="#fff" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Polygone_1" data-name="Polygone 1" transform="translate(185 961.25) rotate(-180)" fill="#fff">
+      <path d="M 15.1384105682373 13.5 L 0.8615881204605103 13.5 L 7.999999523162842 1.007779955863953 L 15.1384105682373 13.5 Z" stroke="none"/>
+      <path d="M 7.999999523162842 2.015560150146484 L 1.723176956176758 13 L 14.27682209014893 13 L 7.999999523162842 2.015560150146484 M 7.999999523162842 0 L 16 14 L -9.5367431640625e-07 14 L 7.999999523162842 0 Z" stroke="none" fill="#707070"/>
+    </g>
+  </g>
+</svg>

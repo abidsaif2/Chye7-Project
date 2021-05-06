@@ -1,33 +1,34 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'chyeh');
-$errors = array('nomPrenom' => '', 'email' => '', 'motepass' => '', 'date' => '', 'gender' => '', 'img' => '');
-if (!$conn) {
-    echo 'connection error' . mysqli_connect_error();
+include('config.php');
+session_start();
+if (isset($_SESSION['email'])) {
+    header("location: profile.php");
 }
+$errors = array('nomPrenom' => '', 'email' => '', 'motepass' => '', 'date' => '', 'gender' => '', 'img' => '');
 $nomPrenom = $email = $motepass = $date = $gender = $img = '';
 
 if (isset($_POST['fsignup'])) {
 
-    if (empty($_POST['fmail'])) {
+    if (empty(htmlspecialchars($_POST['fmail']))) {
         $errors['email'] = 'an email is required <br />';
     } else {
-        $email = $_POST['fmail'];
+        $email = htmlspecialchars($_POST['fmail']);
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $errors['email'] = 'email must be a valid email address';
         }
     }
-    if (empty($_POST['fname'])) {
+    if (empty(htmlspecialchars($_POST['fname']))) {
         $errors['nomPrenom'] = 'a name is required <br />';
     } else {
-        $nomPrenom = $_POST['fname'];
+        $nomPrenom = htmlspecialchars($_POST['fname']);
         if (!preg_match('/^[a-zA-Z\s]+$/', $nomPrenom)) {
             $errors['nomPrenom'] = 'name must be lettres and spaces only';
         }
     }
-    if (empty($_POST['fmdp'])) {
+    if (empty(htmlspecialchars($_POST['fmdp']))) {
         $errors['motepass'] = 'a password is required <br />';
     } else {
-        $motepass = $_POST['fmdp'];
+        $motepass = htmlspecialchars($_POST['fmdp']);
         if (strlen($motepass) < 9) {
             $errors['email'] = 'password must be at least 8 characters ';
         }
@@ -51,7 +52,11 @@ if (isset($_POST['fsignup'])) {
         $sql = "INSERT INTO compts(email,username,passwords,gender,datedenaissance,img) VALUES ('$email','$nomPrenom','$motepass','$gender','$date','$img')";
 
         if (mysqli_query($conn, $sql)) {
-            header('Location:profil.php');
+            $_SESSION["loggedin"] = true;
+            $_SESSION["username"] = $nomPrenom;
+            $_SESSION["email"] = $email;
+            $_SESSION["gender"] = $gender;
+            header('Location: profile.php');
         } else {
             echo 'query error: ' . mysqli_error($conn);
         }
