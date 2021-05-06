@@ -17,7 +17,7 @@ function form_template(numb,question,options){
             </div>
                              
             <label class="checkbox">
-                <input type="checkbox" value="a" id="quiz_input" class="checkbox" name="quiz_input">
+                <input type="radio" value="a" id="quiz_input" class="checkbox" name="quiz_input">
                 <span class="rounded">
                     <span class="txtt">
                           ${options[0]}
@@ -26,7 +26,7 @@ function form_template(numb,question,options){
             </label>
 
             <label class="checkbox">
-                <input type="checkbox" value="b" id="quiz_input" class="checkbox" name="quiz_input">
+                <input type="radio" value="b" id="quiz_input" class="checkbox" name="quiz_input">
                 <span class="rounded">
                     <span class="txtt">
                           ${options[1]}
@@ -35,7 +35,7 @@ function form_template(numb,question,options){
             </label>
 
             <label class="checkbox">
-                <input type="checkbox" value="c" id="quiz_input" class="checkbox" name="quiz_input">
+                <input type="radio" value="c" id="quiz_input" class="checkbox" name="quiz_input">
                 <span class="rounded">
                     <span class="txtt">
                           ${options[2]}
@@ -44,7 +44,7 @@ function form_template(numb,question,options){
             </label>
 
             <label class="checkbox">
-                <input type="checkbox" value="d" id="quiz_input" class="checkbox" name="quiz_input">
+                <input type="radio" value="d" id="quiz_input" class="checkbox" name="quiz_input">
                 <span class="rounded">
                     <span class="txtt">
                           ${options[3]}
