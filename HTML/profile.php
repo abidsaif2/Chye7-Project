@@ -137,11 +137,13 @@
     <div class="modal fade" id="modal" aria-hidden="true" aria-labelledby="..." tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="updateForm1" name="updateForm1" method="POST" action="profile.php" enctype="multipart/form-data">
+                <form id="updateForm1" name="updateForm1" method="POST" action="profile.php" enctype="multipart/form-data">
+                    <div class="modal-header update-header">
+                        <img src="../assets/Icon material-arrow_back.svg" data-bs-dismiss="modal" aria-label="Close">
+                        <h2>My Profile</h2>
+                    </div>
+                    <div class="modal-body update-body">
+
                         <div>
                             <label>Profile Image:</label>
                             <input type="file" name="image" class="inputIMG">
@@ -162,16 +164,18 @@
                             <label>About:</label>
                             <textarea id="aboutme" rows="4" name="about" placeholder="" class="inputTxt"></textarea>
                         </div>
+
+                    </div>
+                    <div class="modal-footer update-footer">
                         <div>
                             <input type="submit" id="submit" name="submit" value="Save changes" class="inputSubmit">
                         </div>
-
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <!-- Toogle to second dialog -->
-                    <button class="btn btn-primary" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Change email & password</button>
-                </div>
+                        <!-- Toogle to second dialog -->
+                        <div>
+                            <button class="btn btn-primary" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Change email & password</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -179,11 +183,14 @@
     <div class="modal fade" id="modal2" aria-hidden="true" aria-labelledby="..." tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content modalWith">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal2" aria-label="Close"></button>
+
+                <div class="modal-header update-header">
+                    <img src="../assets/Icon material-arrow_back.svg" data-bs-dismiss="modal2" aria-label="Close">
+                    <h2>My Profile</h2>
                 </div>
-                <div class="modal-body modalForm">
-                    <div class="form-div1">
+
+                <div class="modal-body modalForm update-body">
+                    <!-- <div class="form-div1">
                         <form id="updateForm2" name="updateForm2" method="POST" action="profile.php">
                             <div>
                                 <label>E-mail:</label>
@@ -202,9 +209,14 @@
                             </div>
 
                         </form>
-                    </div>
-                    <div class="form-div2">
-                        <form id="updateForm3" name="updateForm3" method="POST" action="profile.php">
+                    </div> -->
+                    <form id="updateForm3" name="updateForm3" method="POST" action="profile.php">
+                        <div class="form-div2">
+
+                            <div>
+                                <label>E-mail:</label>
+                                <input type="email" name="email" class="inputTxt txt">
+                            </div>
                             <div>
                                 <label>Password:</label>
                                 <input type="password" name="PWD" class="inputTxt txt">
@@ -217,17 +229,21 @@
                                 <label>Confirm New Password:</label>
                                 <input type="password" name="cNewPWD" class="inputTxt txt">
                             </div>
-                            <div>
-                                <input type="submit" id="submit2" name="submit2" value="Save password" class="inputSubmit">
-                            </div>
 
-                        </form>
+
+
+                        </div>
+                </div>
+                <div class="modal-footer update-footer">
+                    <div>
+                        <input type="submit" id="submit2" name="submit2" value="Save password" class="inputSubmit">
+                    </div>
+                    <!-- Toogle to second dialog -->
+                    <div>
+                        <a class="btn btn-primary" href="#modal" data-bs-toggle="modal" data-bs-dismiss="modal">Change general information</a>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <!-- Toogle to first dialog, `data-bs-dismiss` attribute can be omitted - clicking on link will close dialog anyway -->
-                    <a class="btn btn-primary" href="#modal" data-bs-toggle="modal" data-bs-dismiss="modal">Change general information</a>
-                </div>
+                </form>
             </div>
         </div>
     </div>

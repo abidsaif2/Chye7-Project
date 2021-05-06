@@ -194,10 +194,6 @@ width: 160px;
     margin-top: 20px;
   }
 }
-.upper {
-  background: #1d1d1b;
-  height: 700px; 
-}
 /*us*/
 .us {
   background-image: url(../assets/alter.jpg);
@@ -212,6 +208,7 @@ width: 160px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    color: black;
 }
   
 .single-box { 
@@ -225,9 +222,6 @@ width: 160px;
   border-radius: 50%;
   margin-top: 130px;
   background: rgba(100,77,122,0.45);
-}
-.box-area{
-  color: black;
 }
 .step1
 {
@@ -256,58 +250,84 @@ width: 160px;
 
 
 /*login*/
-.box{
-  padding: 40px;
-  text-align: center;
-  background:#810000;
-  border-radius: 5%;
-  height: 600px;
+.login-content {
+  background-color: #1d1d1b;
+  color: white;
+  height: 700px;
 }
-.box h1{
-color: #E5E5E5 ;
-font-weight: 500;
+.modal-body {
+  height: 100%;
 }
-
-
-.box input[type="email"], .box input[type="password"] {
-  background: #e5e5e5;
-  border: 0;
+form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.modal-first {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 30px;
+}
+.modal-first img {
+  width: 50px;
+  height: 50px;
+}
+.modal-first h5 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 25px;
+}
+.modal-second {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 30px;
+}
+.modal-second div {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.modal-second label {
+  font-size: 1.5rem;
+} 
+.modal-second input {
+  height: 50%;
+  background-color:#1d1d1b ;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #6b50f2;
+  padding: 5px;
+  color: white;
+}
+.modal-second span {
   display: block;
-  margin: 20px auto;
-  text-align: center;
-  border: 2px solid #ddd6f3;
-  padding: 14px 10px;
-  width: 300px;
-  outline: none;
-  border-radius: 24px;
-  transition: 0.25s;
-
 }
-
-.box input[type="email"]:focus, .box input[type="password"]:focus {
-width: 320px; 
-border-color: #000000 ; 
+.modal-third {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.box input[type="submit"] {
-  background: #E5E5E5;
-  border: 0;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-  border: 2px solid #e5E5E5 ;
-  padding: 14px 40px;
-  cursor: pointer;
-  outline: none;
-  color: rgb(0, 0, 0);
-  border-radius: 24px;
-  transition: 0.25s;
+.modal-third input {
+  width: 75%;
+  height: 43%;
+  margin: 10px 0;
+  border-style: none;
+  border-radius: 20px;
+  background-color: #6b50f2;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
-
-.del{
-  width: 20px;
-  margin-left: 280px;
-}
-
 /*descr*/ 
 .description {
   background: #1d1d1b;
