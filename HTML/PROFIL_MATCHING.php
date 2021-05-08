@@ -3,7 +3,7 @@
 </div>
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog profile-modal">
-        <div class="modal-content">
+        <div class="modal-content profile-content">
             <div class="modal-header profile-img">
                 <?php if (!empty($userimg)) {
                     echo "<div style='background-image:url(../images/" . $userimg . "'); ><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'>

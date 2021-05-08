@@ -133,12 +133,7 @@ width: 160px;
 @media (max-width:768px){
   .bt1 {
   width: 360px;
-  
   }
-  .bestmatch{
-    margin-top: 100px;
-  }
- 
   .bestmatch-txt {
     width: 100%;
     text-align: justify;
